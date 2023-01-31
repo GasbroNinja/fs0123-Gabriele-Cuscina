@@ -1,0 +1,25 @@
+p {font-size: 2em;
+margin: 0em;
+padding: 1em;}
+
+address {font-size: 3em;
+    margin: 0em;
+    padding: 1em; 
+    }
+h1 {font-size: 4em;
+    margin: 0.2em
+    }
+#instagram {margin: 0 2em}
+
+th {font-size: 3em;
+color: rgb(209, 0, 0);
+}
+
+li {font-size: 2em; 
+color: aliceblue;
+}
+
+h4 {color: aliceblue;
+    font-size: 2em;
+}
+
