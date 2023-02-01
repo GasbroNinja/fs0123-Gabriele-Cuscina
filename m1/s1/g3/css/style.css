@@ -1,0 +1,104 @@
+body {
+    font-family: 'PT Serif', serif;
+    }
+
+.logo {
+    text-align: center;
+    }
+
+.imglogo {
+    width: 200px;
+    }
+
+.separatore1 {
+    border: 0.1em solid rgb(180, 180, 29);
+    margin-bottom: 0;
+    }
+
+.barra1 {
+    display: block;
+    background-color: rgb(245, 245, 245);
+    line-height: 3em;
+
+    }
+
+.barra2 {display: block;
+    color: darkgreen;
+    font-size: 0.8em;
+    text-align: center;
+    }
+
+main {
+    margin: 0 auto;
+    width: 37%;
+    }
+
+.topimg {
+    text-align: justify;
+    
+    }
+
+h1 {
+    text-align: center;
+    margin-top: 1.8em;
+    margin-bottom: 1em;
+    margin-right: 3em;
+    margin-left: 3em
+    }
+
+.Focaccia {
+    text-align: center;
+    border-radius: 25px;
+    width: 700px;
+    }
+
+.imgauthor {
+    text-align: center;
+    color: grey;
+    opacity: 0.6;
+    }
+
+.downimg {
+    border-left: 0.1em solid rgb(255, 232, 26);
+    }
+
+.feature {
+    color: chocolate;
+    padding-left: 1em;
+    margin-bottom: 0;
+    }
+
+.linkfeature {
+    color: aqua;
+    padding-left: 1em;
+    margin-top: 0em;
+    }
+
+.part2 {
+    text-align: justify;
+   
+    }
+
+.separatore2 {
+    border: 0.1em solid rgb(158, 219, 235);
+    margin-bottom: 2em;
+    }
+
+li {
+    margin-top: 1em;
+    }
+
+.separatore3 {
+    border: 0.1em solid rgb(158, 219, 235);
+    margin-bottom: 2em
+    }
+
+.methodp {
+    padding-left: 2em;
+    }
+
+footer {
+    text-align: justify;
+    margin: 0 auto;
+    width: 37%;
+    }
