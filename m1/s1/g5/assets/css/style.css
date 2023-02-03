@@ -1,0 +1,228 @@
+/* Your styles here */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #393d41;
+    line-height: 1.65;
+
+}   
+
+header {
+    background: black;
+
+}
+
+
+
+.sect1div, .sect2, .sect3, .sect4, p{
+    text-align: center;
+    margin: 0 40px;
+}
+
+.sect3 span {
+    text-align: center;
+    margin: 0 40px;
+    color: #ffffff;
+}
+
+address {
+    text-align: center;
+}
+
+.logo {
+    text-align: center;
+    
+    
+
+}
+
+.imglogo {
+    width: 40%;
+    margin: 30px auto;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    color: #25a2c3;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 50px;
+}
+
+.ptitolo {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #25a2c3;
+    text-align: center;
+
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #ffffff; /* bianco */
+    text-align: center;
+
+}
+
+
+.MarioR {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    color: rgb(255, 255, 255); /*bianco*/
+    margin-top: 30px;
+}
+
+.sect1 {
+    background-image: url("../images/banner.jpg");
+    background-size: 100 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.pulsante{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+
+.pulsante a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f04c2f;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    font-weight: 700;
+    font-size: 70%;
+    margin-bottom: 40px;
+    
+}
+
+.headp1 {
+    margin-top: 50px;
+}
+
+.headp {
+    margin-top: 30px;
+}
+
+.pc1 {
+    text-align: center;
+}
+
+.imgpc1 {
+    border-radius: 100%;
+    text-align: center;
+    width: 300px;
+    margin-top: 30px;
+}
+
+
+
+.sect3 {
+    margin-top: 30px;
+    background-color: #e22d0e;
+    margin-right: auto;
+    margin-left: auto;
+    height: 300px;
+    margin-bottom: 50px;
+}
+
+.sect3 h2 {
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+.sect3 p {
+    color: #ffffff;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+.sect4 img {
+    text-align: center;
+    
+    width: 369px;
+
+    
+}
+
+.img3pc {
+    margin-top: 50px;
+}
+
+.img3pc, .img4pc, .img5pc {
+    border: 1px solid #dee1e3;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+
+.img4pc, .img5pc {
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #25a2c3;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 300px;
+}
+
+footer h2 {
+    padding-top: 30px;
+    font-size: 30px;
+    color: white;
+}
+
+footer a {
+    color: #c8e7f0;
+}
+
+
+i {
+    color:#c8e7f0;
+}
+
+footer p {
+    color: #c8e7f0;
+    
+    font-size: 20px;
+}
+
+.firstpaddress {
+    margin-top: 20px
+}
+
+.lastpaddress {
+    margin-bottom: 20px;
+    
+}
+
+.lastpaddress a {
+    text-decoration: none;
+}
+
+.copyright p {
+    border-top: 1px solid white;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-size: 14px;
+    padding-top: 20px;
+}
