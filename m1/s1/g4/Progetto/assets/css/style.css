@@ -4,7 +4,7 @@ body {
     background-image: url(../img/sfondo.png);
 }
 
-ul li {
+header ul li {
     list-style-type: none;
 }
 
@@ -49,6 +49,7 @@ main {
     margin: 20px;
     padding: 20px;
     background-color: white;
+    text-align: left;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -58,10 +59,70 @@ h1 {
     line-height: 50px;
     margin: 25px auto;
 }
+
+article {
+    line-height: 1.5;
+}
+
+code {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+
+i {
+    color: lightgrey
+}
+
+.p1art, .p2art, .p3art, .p4art, .p5art {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
+
+
+p strong {
+    color: rgb(226, 43, 183);
+    font-weight: bold;
+}
+
+
 /* TABELLE */
+
+caption {
+    font-weight: bold;
+    font-style: italic;
+}
 
 /* FORM */
 
 /* ELEMENTI NELL' ASIDE */
 
 /* FOOTER */
+
+footer {
+    background-color: rgb(19, 68, 85);
+    text-align: center;
+    margin: 0 auto;
+    margin: 20px;
+    padding: 15px 5px 10px 5px;
+    color: white;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    
+}
+
+footer p {
+    padding-bottom: 20px;
+}
+
+footer address {
+    padding-bottom: 15px;
+}
+
+footer a {
+    color: rgb(245, 31, 213);
+}
