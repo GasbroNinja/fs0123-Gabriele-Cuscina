@@ -1,5 +1,4 @@
 function aggiungiSimbolo(elemento){
-    //let simbolo = elemento.textContent;
     let simbolo = elemento.getAttribute('data-simbolo');
     
     let display = document.querySelector('#display');
