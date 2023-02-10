@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Assets/style.css">
+</head>
+<body>
+    <section id="tutto">
+        <div id="bkgr">
+
+        <section id="calc">
+            <div class="descript">
+
+                <h1>Non voglio più usare JavaScript,<br>Liberatemi!<br><span>"passami sopra con il mouse"</span></h1>
+                
+
+            </div>
+            <div id="calcolatrice">
+
+                <div id="schermo">
+
+                    <input type="text" id="display">
+
+                </div>
+                <div class="riga1">
+                    <button data-simbolo="7" onclick="aggiungiSimbolo(this)">7</button>
+                    <button data-simbolo="8" onclick="aggiungiSimbolo(this)">8</button>
+                    <button data-simbolo="9" onclick="aggiungiSimbolo(this)">9</button>
+                    <button data-simbolo="/" onclick="aggiungiSimbolo(this)">/</button>
+                </div>
+
+                <div class="riga2">    
+                    <button data-simbolo="4" onclick="aggiungiSimbolo(this)">4</button>
+                    <button data-simbolo="5" onclick="aggiungiSimbolo(this)">5</button>
+                    <button data-simbolo="6" onclick="aggiungiSimbolo(this)">6</button>
+                    <button data-simbolo="*" onclick="aggiungiSimbolo(this)">x</button>
+                </div>
+
+                <div class="riga3">
+                    <button data-simbolo="1" onclick="aggiungiSimbolo(this)">1</button>
+                    <button data-simbolo="2" onclick="aggiungiSimbolo(this)">2</button>
+                    <button data-simbolo="3" onclick="aggiungiSimbolo(this)">3</button>
+                    <button data-simbolo="-" onclick="aggiungiSimbolo(this)">-</button>
+                </div>
+
+                <div class="riga4">    
+                    <button data-simbolo1="" onclick="aggiungiSimbolo1(this)">C</button>
+                    <button data-simbolo="0" onclick="aggiungiSimbolo(this)">0</button>
+                    <button data-simbolo="." onclick="aggiungiSimbolo(this)">.</button>
+                    <button data-simbolo="+" onclick="aggiungiSimbolo(this)">+</button>
+                </div>
+
+                <div class="riga5">
+                    <button onclick="totale()">=</button>
+                </div>  
+                
+            </div>
+        </section>
+
+
+        </div>
+    </section>
+
+    <script src="JS/index.js">
+    </script>
+</body>
+</html>

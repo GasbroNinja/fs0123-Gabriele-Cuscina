@@ -1,0 +1,179 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0 auto;
+}
+
+#tutto{
+    display: grid;
+
+    min-height: 100vh;
+}
+
+#calc{
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+#bkgr {
+    background-image: url(https://konachan.net/sample/310a29cad3d73c93237f658d6ea43ed5/Konachan.com%20-%20352551%20sample.jpg);
+    background-size: 100% auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+
+h1 {
+    color: #e48fca;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(#e48fca);
+    border: 5px solid rgb(202, 100, 189);
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    transition: 2s;
+    padding: 20px 20px;
+}
+
+h1:hover {
+    --color: #fd00b1;
+
+}
+
+span {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+#calcolatrice div {
+    margin: 25px auto;
+}
+
+#calcolatrice {
+    text-align: center;
+    width: 420px;
+    height: 600px;
+    margin-top: 30px;
+    
+    border: 5px solid #e48fca;
+    padding: 15px 15px;
+}
+
+div #schermo{
+    margin-bottom: 15px ;
+}
+
+#schermo input  {
+    text-align: center;
+    width: 370px;
+    padding: 16px 16px;
+    font-size: 1.5rem;
+    color: var(--color);
+    border: 2px solid #e48fca;
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    transition: 2s;
+    background-color: rgb(159, 233, 181);
+    
+}
+
+input{
+    text-decoration-color: var(--color);
+}
+
+div .riga1 {
+    width: 400px;
+}
+
+div .riga2{
+    width: 400px;
+}
+
+div .riga3{
+    width: 400px;
+}
+
+div .riga4{
+    width: 400px;
+
+}
+
+div .riga5{
+    width: 400px;
+
+}
+
+
+
+button {
+    --color: #1e9bff;
+}
+
+button:hover {
+    --color: #fd00b1;
+
+}
+
+.riga1 button {
+    width: calc(100% / 4 - 0.4rem);
+    padding: 16px 16px;
+    font-size: 1.8rem;
+    color: var(--color);
+    border: 2px solid #e48fca;
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    transition: 2s;
+    background-color: rgb(159, 233, 181);
+}
+
+.riga2 button {
+    width: calc(100% / 4 - 0.4rem);
+    padding: 16px 16px;
+    font-size: 1.8rem;
+    color: var(--color);
+    border: 2px solid #e48fca;
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    transition: 2s;
+    background-color: rgb(159, 233, 181);
+}
+
+.riga3 button {
+    width: calc(100% / 4 - 0.4rem);
+    padding: 16px 16px;
+    font-size: 1.8rem;
+    color: var(--color);
+    border: 2px solid #e48fca;
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    transition: 2s;
+    background-color: rgb(159, 233, 181);
+}
+
+.riga4 button {
+    width: calc(100% / 4 - 0.4rem);
+    padding: 16px 16px;
+    font-size: 1.8rem;
+    color: var(--color);
+    border: 2px solid #e48fca;
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    transition: 2s;
+    background-color: rgb(159, 233, 181);
+}
+
+.riga5 button {
+    width: calc(100%);
+    padding: 16px 16px;
+    font-size: 1.8rem;
+    color: var(--color);
+    border: 2px solid #e48fca;
+    border-radius: 4px;
+    text-shadow: 0 0 15px var(--color);
+    transition: 2s;
+    background-color: rgb(159, 233, 181);
+}
+
