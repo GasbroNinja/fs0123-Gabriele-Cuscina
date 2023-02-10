@@ -6,8 +6,7 @@ body {
     background-image: url(../img/Konachan.com-244351sample.jpg);
     background-size: 100% auto;
     background-size: cover;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;    
 }
 
 div {
@@ -30,7 +29,6 @@ a {
     font-style: italic;
     letter-spacing: 1.2px;
     transition: 3s;
-
 }
 
 a:hover {

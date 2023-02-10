@@ -22,9 +22,11 @@ let bkgr = document.getElementById("bkgr");
     console.dir(bkgr)
 
 let input1 = document.getElementById("diplay");
-console.dir(display)
-
-display.style.color = "#fd00b1"
-display.style.fontWeight = "bold"
-display.style.fontSize = "1.8rem"
-display.style.textShadow = "0 0 15px #e48fca"
+    console.dir(display)
+    
+{
+    display.style.color = "#fd00b1"
+    display.style.fontWeight = "bold"
+    display.style.fontSize = "1.8rem"
+    display.style.textShadow = "0 0 15px #e48fca"
+}
