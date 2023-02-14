@@ -89,38 +89,29 @@ console.log(NumeriPari);
   Scrivi una funzione per sommare a catena i numeri contenuti in un array.
  */
 /*
-  const array = [2, 5, 7, 10, 12, 15, 20];
-  for(let i= 0; i<array.length; i++){
-    return (array[i]+=array);
-    
-  }
-  console.log(array)
-
-  */
- /*
   function sommaArray() {
-    let sum = 0;
-    let array = [20,30,10,8]
-    for (let i = 0; i <= array.length; i++) {
-      if (typeof array[i] === 'number') {
-        sum += array[i];
-       
-      }
-
-      console.log(array);
+  let array = [20,30,10,8]
+    let total = 0;
+    for (let i in array){
+      total += array[i]
     }
-    return i +array
-  }
-  sommaArray()
-  */
+  } 
+console.log(total)
+*/
 /* ESERCIZIO 7
   Scrivi una funzione per incrementare di 1 tutti i valori numerici in un array.
 */
+/*
+const arr  = [20,30,10,8];
 
+const newArr = arr.map(num => num + 1);
+console.log(newArr);
+*/
 /* ESERCIZIO 8
   Sostituisci ogni stringa contenuta in un array con un numero rappresentante la sua lunghezza.
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+
 
 /* ESERCIZIO 9 (EXTRA)
   Scrivi una funzione per eliminare solo i valori PARI da un array.
