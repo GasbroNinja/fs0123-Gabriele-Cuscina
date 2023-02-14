@@ -97,6 +97,7 @@ console.log(NumeriPari);
   console.log(array)
 
   */
+ /*
   function sommaArray() {
     let sum = 0;
     let array = [20,30,10,8]
@@ -111,6 +112,7 @@ console.log(NumeriPari);
     return i +array
   }
   sommaArray()
+  */
 /* ESERCIZIO 7
   Scrivi una funzione per incrementare di 1 tutti i valori numerici in un array.
 */
