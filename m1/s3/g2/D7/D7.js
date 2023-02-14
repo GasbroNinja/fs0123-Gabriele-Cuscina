@@ -102,7 +102,7 @@ console.log(total)
   Scrivi una funzione per incrementare di 1 tutti i valori numerici in un array.
 */
 /*
-const arr  = [20,30,10,8];
+const arr  = [20,30,10,8]; 
 
 const newArr = arr.map(num => num + 1);
 console.log(newArr);
