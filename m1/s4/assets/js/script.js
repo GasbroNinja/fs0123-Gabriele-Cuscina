@@ -2,14 +2,14 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
 //definizione  delle variabili iniziale
-let questions = localStorage.results ? JSON.parse(localStorage.results) : {} // Se ci sono dati in localstorage  uso quelli oppure oggetto vuoto
+let questions = localStorage.results ? JSON.parse(localStorage.results) : [] // Se ci sono dati in localstorage  uso quelli oppure oggetto vuoto
 let questionsCount = 0                                                        // contatore progressivo per le domande del quiz
 let timer
 let main = document.querySelector('#main') //Recupero elemento principale, saranno inserite qui le varie pagine
 let rateBtn = true
 
 //se sono presenti dati in local storage ripresenta la pagina results altrimenti si avvia il quiz da welcome
-if (Object.keys( questions).length > 0) {
+if (questions.length > 0) {
     rateBtn = false                                           //disabilita il pulsante rate us
     refreshPage ('results', renderResults,resultsAnimation)
 }else{
@@ -30,7 +30,8 @@ function welcome() {
           })
 
     document.querySelector('#main input[type="checkbox"]').addEventListener('click', (e) =>{
-      e.target.checked ? proceed.disabled = false : proceed.disabled = true         //se checkbox è spuntata abilita il pulsante proceed
+      //e.target.checked ? proceed.disabled = false : proceed.disabled = true         //se checkbox è spuntata abilita il pulsante proceed
+      proceed.disabled = e.target.checked ? false : true
     })
 }   
 //questa funzione prende determinati parametri che successivamente serviranno per
