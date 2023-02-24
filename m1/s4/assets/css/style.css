@@ -1,0 +1,786 @@
+.container {
+    background-image: url(/assets/images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+.hidden{
+    display: none;
+}
+.layout{
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    padding: 8px 0;
+    position: absolute; 
+}
+nav img {
+    width: 200px;
+    margin: 30px auto;
+    
+}
+#main{
+    min-height: calc(100vh - 125px);
+    color: white;
+    font-family: 'Inter';
+}
+.content{
+    padding-top: 125px;
+}
+
+h1 {
+    font-family: 'Outfit';
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+h1 strong {
+    display: block;
+    font-family: 'Outfit';
+    font-size: 60px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Outfit';
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 1%;
+}
+
+h3 {
+    font-family: 'Outfit';
+    color: #D20094;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h5 {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 3%;
+}
+
+h6 {
+    text-align: center;
+    color: #00FFFF;
+    font-weight: bold;
+    padding-bottom: 10%;
+}
+
+ul {
+    margin: 70px 0 50px 0;
+    padding-left: 30px;
+}
+
+ul li {
+    
+    line-height: 1.5;
+}
+
+ul li strong {
+    font-weight: bold;
+
+}
+/* check-box personalizzata */
+
+.terms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.terms  input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    margin: 8px 20px 8px 8px;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+.terms  input[type="checkbox"]:before {
+    content: '';
+    display: block;
+    box-sizing: content-box;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    transition: 0.2s border-color ease;
+}
+.terms  input[type="checkbox"]:checked:before {
+    border-color: #ffffff;
+    transition: 0.5s border-color ease;
+}
+.terms  input:disabled:before {
+    border-color: #ccc;
+    background-color: #ccc;
+}
+
+.terms  input:after {
+    content: '';
+    display: block;
+    position: absolute;
+    box-sizing: content-box;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;    
+    width: 9.6px;
+    height: 16px;
+    border-radius: 0;
+    transform: translate(-50%, -85%) scale(0) rotate(45deg);
+    background-color: transparent;
+    box-shadow: 4px 4px 0px 0px #ffffff;
+}
+.terms input[type="checkbox"]:checked:after {
+    -webkit-animation: toggleOnCheckbox 0.2s ease forwards;
+            animation: toggleOnCheckbox 0.2s ease forwards;
+}
+.terms input[type="checkbox"].filled:before {
+    border-radius: 4px;
+    transition: 0.2s border-color ease, 0.2s background-color ease;
+}
+.terms input[type="checkbox"].filled:checked:not(:disabled):before {
+    background-color: #ffffff;
+}
+.terms  input[type="checkbox"].filled:not(:disabled):after {
+    box-shadow: 4px 4px 0px 0px white;
+}
+
+@-webkit-keyframes toggleOnCheckbox {
+0% {
+    opacity: 0;
+    transform: translate(-50%, -85%) scale(0) rotate(45deg);
+}
+70% {
+    opacity: 1;
+    transform: translate(-50%, -85%) scale(0.9) rotate(45deg);
+}
+100% {
+    transform: translate(-50%, -85%) scale(0.8) rotate(45deg);
+}
+}
+@keyframes toggleOnCheckbox {
+0% {
+    opacity: 0;
+    transform: translate(-50%, -85%) scale(0) rotate(45deg);
+}
+70% {
+    opacity: 1;
+    transform: translate(-50%, -85%) scale(0.9) rotate(45deg);
+}
+100% {
+    transform: translate(-50%, -85%) scale(0.8) rotate(45deg);
+}
+}
+
+
+
+
+/*                                     PRECEDENTE CREAZIONE CSS CON HTML STATICO
+section {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1100px;
+    height: 800px;
+    margin-left: 10%;
+    color: white;
+    font-family: 'Inter';
+    margin-right: 10%;
+    padding-top: 10%;
+    margin: 0 auto;
+}
+*/
+
+.welcontent{
+    margin-bottom: 224px;
+}
+
+
+.welcome .footer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.welcome .footer  span{
+    font-family: 'Inter';
+    font-size: 16px;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    
+}
+
+.terms{
+    flex-grow: 1;
+}
+
+.welcome .footer label {
+    cursor: pointer;
+    padding-left: 15px;
+    
+}
+.welcome .footer button{
+    font-family: 'Outfit';
+    background: #00FFFF;
+    padding: 20px 55px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: bold;
+    text-transform: uppercase;    
+    color: rgb(32, 2, 38);
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px #00FFFF, 0 0 20px #00FFFF;
+}
+.welcome .footer button:disabled {
+    background: transparent;
+}
+
+/* ----------------       FINE SECTION 1     ---------------------- */
+/* --------------SEZIONE SCEGLI LA DIFFICOLTA'--------------------- */
+
+
+.difficulty select{
+    font-family: 'Outfit';
+    border: 1px solid #ad087cb3;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 50px;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    width: 20%;
+    box-shadow: 8px 2px 8px 2px #D20094, 4px 2px 8px 2px rgba(144,0,144,1);
+    color: #ddd;
+    background-color: transparent;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.difficulty select:focus-visible{
+    outline: none;
+}
+
+
+.difficulty input[type="number"]{
+    font-family: 'Outfit';
+    font-size: 1rem;
+    appearance: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 50px;
+    border: 1px solid #ad087cb3;
+    box-shadow: 8px 2px 8px 2px #D20094, 4px 2px 8px 2px rgba(144,0,144,1);
+    color: #ddd;
+    width: 325px;
+    text-align: center;
+}
+/* DA CONTROLLARE ANIMAZIONE 
+.difficulty input[type="number"]::hover{
+    width: 400px;
+    transition: 0.5s;
+    font-size: 2rem;
+}
+
+input[type="number"]::selection{
+
+    box-shadow: 0 30px #D20094, 0 0 50px rgba(144,0,144,1);
+}
+*/
+.difficulty .footer button{
+    transition: 1s;
+    font-family: 'Outfit';
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 20px 55px;
+    background-color: #00FFFF;
+    border: 3px solid transparent;
+    color: rgb(32, 2, 38);
+    font-weight: bold;
+    font-style: bold;
+    box-shadow: 0 0 5px #00FFFF, 0 0 20px #00FFFF;
+}
+
+.difficulty .footer button::content{
+    letter-spacing: 2.5;
+    transition: 1s;
+}
+
+.difficulty .footer button:disabled {
+    background: transparent;
+}
+
+.difficulty fieldset{
+    height: 520px;
+    width: 1140px;
+    margin: 0;
+}
+
+.loader > p{
+    font-family: 'Outfit';
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(255, 195, 243);
+    text-shadow: 0 0 15px #D20094, 0 0 30px rgba(144,0,144,1);
+}
+
+.loader{
+    transition: 0.3s;
+    position: absolute;
+    background: linear-gradient(122deg, rgba(12,17,59,0.8) 50%, rgba(93,34,116,0.8) 62%, rgba(67,29,80,0.8) 74%, rgba(106,38,128,0.8) 87%);
+    border: 5px solid rgba(128, 46, 154, 0.7);
+    border-top-right-radius: 75px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 75px;
+    border-bottom-left-radius: 100px;
+    top: 275px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.loader.active{
+    display: flex;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    
+}
+
+.lds-ripple div {
+    margin-top: 30px;    
+    position: absolute;
+    border: 4px solid #D20094;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px #D20094, 0 0 30px rgba(144,0,144,1);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+}
+}
+
+/*---------------FINE SEZIONE DIFFICOLTA'--------------------------*/
+/*--------------- INIZIO BENCHMARK --------------------------------*/
+input[type="radio"]{
+    display: none;
+} 
+#timer {
+    font-size: 1rem;
+    width: 130px;
+    height: 130px;
+}
+
+.layoutimer{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-end;
+    padding-top: 30px;
+}
+
+.testotimer{
+    text-align: center;
+    width: 130px;
+    height: 130px;
+    padding: 40px 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 0.5rem;
+}
+svg {
+    max-width: 100%;
+    vertical-align: middle;
+    transform: rotate(-90deg);
+}
+
+.svg-indicator {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 30px;
+}
+
+.svg-indicator-track, .svg-indicator-indication {
+    cx: 65px;
+    cy: 65px;
+    r: 50px;
+    fill: transparent;
+    stroke-width: 15px;
+}
+  
+.svg-indicator-track {
+    stroke: #ddd;
+    filter: drop-shadow(5px 3px 4px rgb(0 0 0 / 0.5));
+}
+  
+.svg-indicator-indication {
+    stroke: #00FFFF;
+    stroke-dasharray: 314px;
+    stroke-dashoffset: 0px;
+}
+
+
+#countdown{
+    font-family: 'Outfit';
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1%;
+}
+
+
+fieldset {
+    width: 100vh;/* SISTEMARE DIMENSIONE NON IN VH */
+    height: 70vh;/* SISTEMARE DIMENSIONE NON IN VH */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 30px;
+    margin: 0 auto;
+
+}
+/*QUESTE IMPOSTAZIONI SONO SIA GENERICHE SIA PER BENCHMARK*/
+
+legend {
+    font-family: 'Outfit';
+    font-size: 60px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+form fieldset label {
+    width: 350px;
+    margin: 0 auto;
+    display: block;
+    padding: 25px 0px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 50px;
+    text-align: center;    
+}
+
+form fieldset label:hover{
+    background: rgb(210,0,148);
+    background: linear-gradient(90deg, rgba(210,0,148,1) 35%, rgba(144,0,144,1) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.footer {
+    font-family: 'Outfit';
+    font-size: 1.3rem;
+    margin: 1% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 4px; 
+}
+
+.slash{
+    color: #D20094;
+}
+
+/*FINE IMPOSTAZIONI GENERICHE E BENCHMARK*/
+
+/* ------------------FINE SEZIONE 2---------------------------------*/
+
+
+.results .content > p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Outfit';
+    margin-bottom: 3%;
+}
+
+.percentuali{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.centro{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scorePie {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}  
+
+.testocentro {
+    padding: 0 20%;
+    text-align: center;
+}
+
+.hideMsg{
+    display: none;
+    margin-top: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+
+}
+
+.centro  p {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+#wrong  {
+    width: 350px;
+    height: 350px;
+    text-align: end;
+    padding: 10% 2% 0 0;
+    box-sizing: border-box;
+}
+
+#correct {
+    width: 350px;
+    height: 350px;
+    text-align: start;
+    padding: 10% 0 0 2%;
+    box-sizing: border-box;
+}
+
+
+
+#wrong > h4, #correct > h4{
+    font-family: 'Outfit';
+    font-size: 60px;
+    margin-bottom: 2%;
+
+}
+
+
+#wrong p:nth-child(2){
+    font-family: 'Outfit';
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 2%;
+    
+}
+
+#correct p:nth-child(2){
+    font-family: 'Outfit';
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 2%;
+    
+}
+
+#correct p:nth-child(3){
+    font-size: 1.3rem;
+}
+
+#wrong p:nth-child(3){
+    font-size: 1.3rem;
+}
+
+.results .footer button {
+
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 60px;
+    background: transparent;
+    font-size: 1.5rem;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-style: bold;
+    box-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF;
+}
+
+.results .footer button:hover{
+    transition: 1s;
+    background: #00FFFF;
+    box-shadow: 0 0 5px #00FFFF,
+    0 0 10px #00FFFF, 0 0 20px #00FFFF;
+}
+
+
+/* -------------------- FINE SEZIONE 3 -------------------------------- */
+
+
+.feedback .content{
+    text-align: center;
+    padding: 18% 13% 0 13%;
+}
+
+.feedback p:nth-child(2){
+    font-family: 'Outfit';
+    font-size: 2rem;
+    margin-bottom: 4%;
+}
+
+
+.feedback p:nth-child(4){
+    font-family: 'Outfit';
+    font-size: 1.8rem;
+    margin-bottom: 5%;
+}
+
+.feedback h2{
+    margin-bottom: 4%;
+}
+
+input[type="text"]{
+    display: block;
+    font-size: 1.1rem;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 10px;
+    color: #ddd;
+    width: 100%;
+}
+
+.commento{
+    border-bottom: 1px solid #D20094;
+    margin-bottom: 8%;
+    padding: 0 20px;
+}
+
+input:focus-visible{
+    outline: none;
+}
+
+.feedback .footer button {
+    font-family: 'Outfit';
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 20px 55px;
+    background-color: #00FFFF;
+    border: 3px solid transparent;
+    color: rgb(32, 2, 38);
+    font-weight: bold;
+    font-style: bold;
+    box-shadow: 0 0 5px #00FFFF, 0 0 20px #00FFFF;
+}
+
+.feedback .footer button:disabled {
+    background: transparent;
+}
+
+
+.rating {
+    display: flex;
+    letter-spacing: 1rem;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: row-reverse;
+    height: 70px;
+    position: relative;
+    margin-bottom: 80px;
+}
+  
+.rating-0 {
+    filter: grayscale(100%);
+}
+  
+.rating > input {
+    display: none;
+    caret-color: transparent;
+}
+  
+.rating > label {
+    color: transparent;
+    cursor: pointer;
+    caret-color: transparent;
+    width: 70px;
+    height: 70px;
+    margin-top: auto;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 76%;
+    transition: .3s;
+    opacity: 0.1;
+}
+    
+.rating > input:checked ~ label,
+.rating > input:checked ~ label ~ label {
+    background-image: url('../images/star.svg');
+    opacity: 1;
+}
+  
+.rating > input:not(:checked) ~ label:hover,
+.rating > input:not(:checked) ~ label:hover ~ label {
+    background-image: url('../images/star.svg');
+    opacity: 0.8;
+}
