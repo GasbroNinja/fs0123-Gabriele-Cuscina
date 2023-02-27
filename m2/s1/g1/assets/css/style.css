@@ -31,6 +31,8 @@ header nav ul {
 }
 header nav li {
     list-style: none;
+    display: inline-block;
+    margin-inline: 5px;
 }
 header nav li a {
     color: white;
@@ -44,12 +46,20 @@ header nav li a::before {
 }
 
 /* MAIN */
+
 main {
     background-color: #fff;
     box-shadow: 0 3px 3px #444;
     padding: 2em 1em;
     margin-bottom:1.5em ;
 }
+
+article div img{
+    max-width: 50px;
+    border: 2px solid #009dc3;
+    outline: 2px solid #a01c6d;;
+}
+
 section { 
     background-color: #e3e3e3;
     padding: 1em;
@@ -60,8 +70,9 @@ section h2 {
     color: #333;
     font-size: 2rem;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-bottom: 1em;
+    background-color: #a3a3a3;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -177,4 +188,162 @@ footer {
 }
 footer a {
     color: fuchsia;
+}
+
+/* MOBILE
+@media screen and (min-width: 320px) and (max-width: 576px){
+
+
+    
+}
+*/
+
+/* TABLET */
+@media screen and (min-width: 576px) and (max-width: 1199px){
+    main{
+        padding: 2em 2em;
+    }
+    
+
+    h1{
+        font-size: 4.5rem;
+        line-height: 1.15;
+    }
+    
+    h2{
+        font-weight: bold;
+    }
+
+    table{
+        margin-block: 50px;
+        margin-inline: auto;
+        width: 60%;
+    }
+
+    footer{
+        font-size: 1.45rem;
+    }
+
+}
+
+/* */
+
+@media screen and (min-width: 1200px) {
+    body{
+        font-size: 2rem;
+        padding: 60px;
+    }
+
+    header{
+        text-align: left;
+        min-height: 110px;
+    }
+
+    header div > p {
+        display: inline-block;
+        float: right;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+
+
+    header div{
+        display: inline-block;
+        height: 60px;
+    }
+
+    header div img{
+        margin: 0;
+    }
+    nav{
+        display: inline-block;
+        float: right;
+        margin-top: 20px;
+    }
+
+    main{
+        padding: 2em 2em;
+    }
+    
+
+    h1{
+        font-size: 5rem;
+        line-height: 1.15;
+    }
+    
+    h2{
+        font-weight: bold;
+    }
+
+    table{
+        margin-block: 50px;
+        margin-inline: auto;
+        width: 80%;
+    }
+
+    iframe{
+        width: 50%;
+        height: 250px;
+       
+    }
+
+    section{
+        display: inline-block;
+        width: 50%;
+        height: 250px;
+        float: right;
+        border-radius: 3%;
+        line-height: 2;
+    }
+
+    section form fieldset > input {
+        width: 70%;
+        height: 50px;
+    }
+
+    button {
+        padding: 17px 30px;
+        background-color: #3f6bca;
+        border: 0;
+        color: white;
+        font-weight: bold;
+    }
+
+    aside div{
+        display: inline-block;
+        width: 33%;
+        margin-inline: -3px;
+        font-size: 1.4rem;
+    }
+
+    footer{
+        height: auto;
+        font-size: 1.8rem;
+        padding: 1em 10em;
+    }
+
+}
+
+@media print{
+    header{
+        display:none;
+    }
+
+    iframe{
+        display:none;
+    }
+
+    section{
+        display:none;
+    }
+
+    aside{
+        display:none;
+    }
+
+    footer{
+        display:none;
+    }
+
 }
