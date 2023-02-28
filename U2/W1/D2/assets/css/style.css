@@ -35,7 +35,7 @@ header {
   padding: 2em 1.5em;
   position: fixed;
   top: 15px;
-  bottom: 930px;
+
   right: 15px;
   left: 15px;
   z-index: 2;
@@ -59,7 +59,6 @@ header {
     text-align: left;
     position: fixed;
     top: 15px;
-    bottom: 1050px;
     right: 15px;
     left: 15px;
     z-index: 2;
@@ -170,6 +169,7 @@ h1 {
 }
 
 b {
+  display: inline-block;
   position: relative;
   z-index: 1;
 }
@@ -423,8 +423,9 @@ aside div p .fa-tag{
   padding-left: 15px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  -webkit-backdrop-filter: blur(10px);
+
   backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
   color:rgb(0, 56, 198);
   position: absolute;
   top: -150px;
@@ -439,9 +440,9 @@ aside div p .fa-tag{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   color:rgb(0, 56, 198);
-  -webkit-backdrop-filter: blur(10px);
+
   backdrop-filter: blur(10px);
-  backdrop-filter: blur(2%);
+  background-color: rgba(255, 255, 255, 0.6);
   position: absolute;
   top: -75px;
   right: -15px;
@@ -453,7 +454,7 @@ aside div p .fa-tag{
   padding-left: 15px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   color:rgb(251, 95, 43);
   position: absolute;
@@ -490,13 +491,12 @@ footer {
   }
 
   .icona1{
-
     border: 2px solid rgb(255, 255, 255);
     padding-left: 15px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
     color:rgb(0, 56, 198);
     position: fixed;
     top: 10px;
@@ -512,8 +512,8 @@ footer {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     color:rgb(0, 56, 198);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
     backdrop-filter: blur(2%);
     position: fixed;
     top: 90px;
@@ -527,12 +527,13 @@ footer {
     padding-left: 15px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
     color:rgb(251, 95, 43);
     position: fixed;
-    top: 1100px;
+    top: 90vh;
     right: 0;
+    z-index: 2;
     font-size: 2rem;
   }
   
@@ -567,19 +568,17 @@ footer a {
 
   .icona1{
 
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.629);
     padding-left: 15px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
     color:rgb(0, 56, 198);
     position: fixed;
     top: 10px;
     right: 0;
-
     font-size: 2rem;
-    
   }
   
   .icona2{
@@ -588,9 +587,8 @@ footer a {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     color:rgb(0, 56, 198);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
-    backdrop-filter: blur(2%);
     position: fixed;
     top: 90px;
     right: 0;
@@ -598,15 +596,15 @@ footer a {
   }
   
   .icona3{
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.088);
     padding-left: 15px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
     color:rgb(251, 95, 43);
     position: fixed;
-    top: 1100px;
+    top: 90vh;
     right: 0;
     font-size: 2rem;
   }
