@@ -2,7 +2,7 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 20px;
-    background-color: rgb(72, 72, 72);
+    
 }
 
 *{
@@ -118,8 +118,17 @@ article > div{
 .card-content{
     display: flex;
     align-items: center;
-    column-gap: 200px;
+    column-gap: 100px;
 }
+
+.card-content > div{
+    margin-left: 10px;
+}
+
+.card-content > div p{
+    margin-bottom: 10px;
+}
+
 
 article div img{
     max-width: 100%;
@@ -132,15 +141,18 @@ article div h4{
     display: flex;
     color: rgb(112, 28, 18);
     font-weight: bold;
-    margin-block: 30px;
+    margin-top: 20px;
+    margin-bottom: 5px;
     font-size: 1rem;
     font-size: 1.3rem;
+    
 }
 
 article div p{
+    text-align: center;
     color: rgb(112, 28, 18);
     margin: 0;
-    margin-block: 30px;
+    
     font-size: 1rem;
     
 }
@@ -183,6 +195,7 @@ aside h2{
     text-align: center;
     margin-block: 30px;
     font-size: 2rem;
+    padding-right: 50px;
 }
 
 aside h4{
