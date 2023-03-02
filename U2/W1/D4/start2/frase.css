@@ -1,10 +1,346 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    width: 600px;
+    height: 100vh;
+    padding-inline: 15px;
+    
+}
+
+#testoAlternato{
+    margin-top: 20%;
+    border: 2px solid black;
+    padding: 15px 15px;
+    font-weight: bold;
+    line-height: 1.25;
+    position: relative;
+}
+
+span i {
+    color: rgb(131, 167, 191);
+}
+
+
+
+.parole i:first-child{
+    position: absolute;
+    left: 200px;
+    animation: slide-bck-tr 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite;
+}
+
+@keyframes slide-bck-tr {
+    0% {
+          opacity: 1;
+          transform: translateX(0px);
+    }
+  
+    50%{
+          opacity: 0;
+          transform: translateX(400px);
+    }
+  
+    100% {
+          opacity: 1;
+          transform: translateX(0px);
+    }
+  }
+
+
+.parole i:nth-child(2){
+    position: absolute;
+    left: 330px;
+    animation: slide-bck-right 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) 0.5s infinite alternate-reverse both;
+
+}
+
+@keyframes slide-bck-right {
+    0% {
+          opacity: 1;
+          transform: translateX(0);
+    }
+  
+    50%{
+          opacity: 0;
+          
+    }
+  
+    100% {
+          opacity: 1;
+          transform: translateX(200px);  
+    }
+  }
+
+.parole i:nth-child(3){
+    position:absolute;
+    left: 410px;
+    animation: slide-bck-tr 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite;
+}
+
+@keyframes slide-bck-tr {
+  0% {
+        opacity: 1;
+        transform: translateX(0px);
+  }
+
+  50%{
+        opacity: 0;
+        transform: translateX(400px);
+  }
+
+  100% {
+        opacity: 1;
+        transform: translateX(0px);
+  }
+}
+
+
+
+
 /*
 1 creazione del testo e formattazione di 1 parola da far ruotare
+
+.parole > i:first-child {
+    position: absolute;
+    display: block;
+    animation: rotateWord 2s ease-in-out infinite;
+    margin-left: 2rem;
+}
+
+@keyframes rotateWord {
+    0% {
+        transform: rotateZ(0deg);
+        opacity: 1;
+    }
+
+
+    100% {
+        transform: rotateZ(360deg);
+        opacity: 1;
+    }
+}
+
+.parole i:not(:first-child) {
+    opacity: 0;
+}
+
+
+
 2 inserimento delle altre 2 parole
+
+.parole i:not(:first-child) {
+    position: relative;
+    top: 0;
+    left: 150px;
+    opacity: 1;
+}
+
 3 sovrapporre le 3 parole
+
+.parole i:not(:first-child) {
+    position: absolute;
+    top: 215px;
+    left: 150px;
+    opacity: 1;
+}
+
+
 4 mostrare 1 parola e nascondere le altre 2
+
+.parole i:first-child{
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.parole i:first-child {
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+    animation-name: fade;
+    transition-property: animation;
+    transition: 1s;
+}
+
+.parole i:not(:first-child) {
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.parole i:first-child {
+    animation: slide-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@keyframes slide-fwd-center {
+  0% {
+            
+            opacity: 0;
+
+  }
+  100% {
+            
+            opacity: 1;
+  }
+}
+
+
+
+
 5 animare 1 parola (fadein - fadeout con spostamento)
+
+.parole i:first-child{
+    animation: slide-bck-tr 1.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite;
+}
+
+@keyframes slide-bck-tr {
+  0% {
+        opacity: 1;
+  }
+
+  50%{
+        opacity: 0;
+  }
+
+  100% {
+        opacity: 1;
+  }
+}
+
 6 animare le altre 2 parole
+
+.parole i:first-child{
+    animation: slide-bck-tr 1.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite;
+}
+
+@keyframes slide-bck-tr {
+  0% {
+        opacity: 1;
+  }
+
+  50%{
+        opacity: 0;
+  }
+
+  100% {
+        opacity: 1;
+  }
+}
+
+.parole i:nth-child(2){
+    animation: slide-bck-tr 2.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite;
+}
+
+@keyframes slide-bck-tr {
+  0% {
+        opacity: 1;
+  }
+
+  50%{
+        opacity: 0;
+  }
+
+  100% {
+        opacity: 1;
+  }
+}
+
+.parole i:nth-child(3){
+    animation: slide-bck-tr 3.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite;
+}
+
+@keyframes slide-bck-tr {
+  0% {
+        opacity: 1;
+  }
+
+  50%{
+        opacity: 0;
+  }
+
+  100% {
+        opacity: 1;
+  }
+}
+
 7 ritardare progressivamente l'animazione delle altre 2 parole 
+
+.parole i:first-child{
+    position: absolute;
+    left: 200px;
+    animation: slide-bck-tr 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite;
+}
+
+@keyframes slide-bck-tr {
+    0% {
+          opacity: 1;
+          transform: translateX(0px);
+    }
+  
+    50%{
+          opacity: 0;
+          transform: translateX(400px);
+    }
+  
+    100% {
+          opacity: 1;
+          transform: translateX(0px);
+    }
+  }
+
+
+.parole i:nth-child(2){
+    position: absolute;
+    left: 330px;
+    animation: slide-bck-right 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) 0.5s infinite alternate-reverse both;
+
+}
+
+@keyframes slide-bck-right {
+    0% {
+          opacity: 1;
+          transform: translateX(0);
+    }
+  
+    50%{
+          opacity: 0;
+          
+    }
+  
+    100% {
+          opacity: 1;
+          transform: translateX(200px);  
+    }
+  }
+
+.parole i:nth-child(3){
+    position:absolute;
+    left: 410px;
+    animation: slide-bck-tr 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite;
+}
+
+@keyframes slide-bck-tr {
+  0% {
+        opacity: 1;
+        transform: translateX(0px);
+  }
+
+  50%{
+        opacity: 0;
+        transform: translateX(400px);
+  }
+
+  100% {
+        opacity: 1;
+        transform: translateX(0px);
+  }
+}
+
+
+HO RICREATO IL GIOCO DEL FLIPPER PERO' CON 3 PAROLE, CHI SIAMO NOI PER GIUDICARE
+
 */
 
