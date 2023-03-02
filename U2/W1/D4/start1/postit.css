@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    background-color: #636363;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2{
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+p{
+    font-size: 0.6rem;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 850px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.post4it, .post8it{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 0 60px;
+    height: 100px;
+    margin-top: 50px;
+}
+
+.postit1, .postit2, .postit3, .postit4, .postit5, .postit6, .postit7, .postit8{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    width: 200px;
+    height: 100px;
+    box-shadow: 3px 3px 5px 1px rgba(193, 193, 193, 0.7);
+    
+}
+
+.postit1{
+    background: linear-gradient(180deg, rgba(248,248,198,1) 72%, rgba(168,168,168,0.7) 100%);
+    transform: rotate(-5deg);
+
+}
+
+.postit1:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:  1s;
+    transform-origin: box-shadow;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.postit2{
+    background: linear-gradient(180deg, rgba(184,220,186,1) 72%, rgba(168,168,168,0.7) 100%);
+    transform: rotate(5deg);
+}
+
+.postit2:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:  1s;
+    transform-origin: box-shadow;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.postit3{
+    background: linear-gradient(180deg, rgba(177,177,204,1) 72%, rgba(168,168,168,0.7) 100%);
+    transform: rotate(-5deg);
+}
+
+.postit3:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:  1s;
+    transform-origin: box-shadow;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.postit4{
+    background: linear-gradient(180deg, rgba(184,220,186,1) 72%, rgba(168,168,168,0.7) 100%);
+    transform: rotate(5deg);
+}
+
+.postit4:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:  1s;
+    transform-origin: box-shadow;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.postit5{
+    background: linear-gradient(180deg, rgba(248,248,198,1) 72%, rgba(168,168,168,0.7) 100%);
+    transform: rotate(-5deg);
+}
+
+.postit5:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:  1s;
+    transform-origin: box-shadow;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.postit6{
+    background: linear-gradient(180deg, rgba(177,177,204,1) 72%, rgba(168,168,168,0.7) 100%);
+    transform: rotate(-10deg);
+}
+
+.postit6:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:  1s;
+    transform-origin: box-shadow;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.postit7{
+    background: linear-gradient(180deg, rgba(248,248,198,1) 72%, rgba(168,168,168,0.7) 100%);
+    transform: rotate(-5deg);
+}
+
+.postit7:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:  1s;
+    transform-origin: box-shadow;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.postit8{
+    background: linear-gradient(180deg, rgba(184,220,186,1) 72%, rgba(168,168,168,0.7) 100%);
+    transform: rotate(5deg);
+}
+
+.postit8:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:  1s;
+    transform-origin: box-shadow;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
