@@ -6,9 +6,7 @@ ul {
 @mixin floating($border-r,$box-S,$border){
     border-radius: $border-r
     box-shadow: $box-S
-
-    @if($border == )
-
+    border: $border
 
 
 }
