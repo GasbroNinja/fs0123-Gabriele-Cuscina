@@ -1,0 +1,67 @@
+@mixin floating1{
+    border: 2px solid darken($button-1c, 15%);
+    border-radius: $mediumpad;
+    box-shadow: 1px 5px 5px darken($button-1c, 30%);
+}
+
+/* 
+@mixin floating($border-r,$box-S,$border){
+    border-radius: $border-r
+    box-shadow: $box-S
+
+    @if($border == )
+
+
+
+}
+
+
+
+*/
+
+
+@mixin floating2{
+    border: 2px solid darken($button-2c, 15%);
+    border-radius: $mediumpad;
+    box-shadow: 1px 5px 5px darken($button-2c, 30%);
+}
+
+@mixin floating3{
+    border: 2px solid darken($button-3c, 15%);
+    border-radius: $mediumpad;
+    box-shadow: 1px 5px 5px darken($button-3c, 30%);
+}
+
+@mixin floating4{
+    border: 2px solid darken($text-color, 15%);
+    border-radius: $mediumpad;
+    box-shadow: 1px 5px 5px darken($text-color, 30%);
+}
+
+@mixin animation1{
+    animation: fadeIn 3s;
+
+    @keyframes fadeIn {
+        0% { opacity: 0;
+            transform: translateX(2000px);
+         }
+        100% { opacity: 1; 
+            transform: translateX(0px);
+        }
+    }
+    
+}
+
+@mixin grid($columns) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+    @for $i from 0 to $columns {
+      .grid-item-#{$i + 1} {
+        flex-basis: calc(100% / ($columns - $i));
+      }
+    }
+  }
+

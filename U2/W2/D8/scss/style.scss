@@ -1,0 +1,143 @@
+
+@import "./partial/colors";
+@import "./partial/spaziature";
+@import "./partial/font";
+@import "./partial/mixinsgeneric";
+@import "./partial/buttons";
+@import "./partial/animazioni";
+@import "./partial/reset";
+
+body{
+    margin: 0;
+    font-family: 'Tilt Neon', cursive;
+    
+}
+
+
+.container{
+    .navbar{
+        nav{
+            background-color: $bg-col-nav;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            & > div{
+                
+                img{
+                    padding-left: $smallpad;
+                    margin-top: $smallmarg;
+                    max-width: 70px;
+                    max-height: 70px;
+
+                }
+            }
+            div{
+                
+            
+                
+                ul{
+                    
+                    
+                    li{
+                        list-style: none;
+                        display: inline-block;
+                        padding-left: $largepad;
+                        padding-right: $largepad;
+                
+
+                        a{
+                            font-size: $font-s-btn;
+                            text-decoration: none;
+                            color: $text-color;
+                        }
+                    }
+                    li:nth-child(1){
+                        @extend %buttons-head1;
+                    }
+                    li:nth-child(2){
+                        @extend %buttons-head2;
+                    }
+                    li:nth-child(3){
+                        @extend %buttons-head3;
+                    }
+                }
+            }
+        }
+    }
+    header{
+        margin: $mediummarg $largemarg;
+        background-color: darken($bg-col-nav, 45%);
+        border-radius: $smallmarg;
+        color: $text-color;
+        @include animation1;
+        div{
+            margin: $smallmarg $largemarg;
+            display: flex;
+
+            div{
+                text-align: center;
+                margin-top: $smallmarg;
+                align-items: center;
+                div{
+
+                    h1{
+                        
+                        text-shadow: 1px 3px 3px darken($text-color, 30%);
+                        & > img{
+                            margin-top: $smallmarg;
+                        }
+                    }
+                }
+                div{
+                    margin: $mediummarg $mediummarg;
+                    button{
+                        padding: $smallpad $mediumpad;
+                        appearance: none;
+                        color: $text-color;
+                        
+                    }
+                    button:nth-child(1){
+                        @extend %buttons-head1;
+                    }
+                    button:nth-child(2){
+                        @extend %buttons-head2;
+                    }
+                    button:nth-child(3){
+                        @extend %buttons-head3;
+                    }
+                }
+
+            }
+            div{
+                margin: auto;
+                
+                img{
+                    padding-left: $smallpad;
+                    margin-top: $smallmarg;
+                    max-width: 300px;
+                    max-height: 300px;
+                    @include floating4;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .le4Img{
+        @include grid(3);
+        
+        div{
+
+            img{
+                @include floating4;
+                max-width: 700px;
+                max-height: 300px;
+
+            }
+        }
+    }
+
+
+
+}

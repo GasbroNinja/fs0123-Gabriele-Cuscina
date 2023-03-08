@@ -1,0 +1,17 @@
+%buttons-head1{
+    @include floating1;
+    background-color: $button-1c;
+    margin-right: $smallmarg;  
+}
+
+%buttons-head2{
+    @include floating2;
+    background-color: $button-2c;
+    margin-right: $smallmarg;
+}
+%buttons-head3{
+    @include floating3;
+    background-color: $button-3c;
+    margin-right: $smallmarg;
+}
+
