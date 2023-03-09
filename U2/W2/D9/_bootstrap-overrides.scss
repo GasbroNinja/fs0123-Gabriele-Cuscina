@@ -10,14 +10,28 @@
 qua ci mettete tutti gli override alle variabili
 per sapere quali sono le variabili andate nel file corrispondente _variables.scss
 */
+$primary: #9d88d1;
 @import "./bootstrap/variables";
 //Include any default map overrides here
 /*
 qua ci mettete tutti gli override alle maps
 per sapere quali sono le variabili andate nel file corrispondente _maps.scss
 */
+$mycol:(
+    
+    "purple" : purple
+);
+
+$theme-colors: map-merge($theme-colors , $mycol );
+
+
+
 
 @import "./bootstrap/maps";
+
+
+
+
 @import "./bootstrap/mixins";
 @import "./bootstrap/utilities";
 
