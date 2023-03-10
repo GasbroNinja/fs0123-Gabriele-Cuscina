@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <div class="container-fluid p-0 bg-dark min-vh-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark d-flex justify-content-center mw-100">
+            <div class="container p-0 mb-2">
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid" width="130px"
+                        src="assets/netflix_logo.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active fw-semibold">
+                            <a class="nav-link text-light" href="#">Home <span class="visually-hidden-focusable">(current)</span></a>
+                        </li>
+                        <li class="nav-item text-hover-active ">
+                            <a class="nav-link text-light" href="#week-deal">TV Shows</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#welcome-summer">Movies</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#last-minute">Recently Added</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#testimonials">My list</a>
+                        </li>
+    
+    
+                    </ul>
+                    <div class="d-flex align-items-center my-2 my-lg-0 ">
+                        <li class="nav-item ">
+                            <a class="text-light list-unstyled list-group-item-action active
+                            text-decoration-none" href="#last-minute"><i class="bi bi-search fw-bold"></i></a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="text-light list-unstyled list-group-item-action active
+                            text-decoration-none" href="#last-minute">KIDS</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="text-light list-unstyled list-group-item-action active text-decoration-none" href="#testimonials"><i class="bi bi-bell-fill"></i></a>
+                        </li>
+
+                        <li class="nav-item dropdown dropdown-top">
+                            <a class="dropdown-toggle text-light list-unstyled text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="img-fluid" src="assets/avatar.png" width="50px" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end mt-2 bg-dark">
+                                <li><a class="dropdown-item text-secondary" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item text-secondary" href="settings.html">Settings</a></li>
+                                <li><hr class="dropdown-divider bg-light"></li>
+                                <li><a class="dropdown-item text-secondary" href="#">Others</a></li>
+                            </ul>
+                            </li>
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <header>
+            <div class="container d-flex align-items-center text-light p-0 mb-3">
+                <div class="pe-5">
+                    <h1>Tv Shows</h1>
+                </div>
+                <div class="dropdown-center me-auto">
+                    <button class="btn btn-dark btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Genres
+                    </button>
+                    <ul class="dropdown-menu bg-dark text-light my-1">
+                      <li><a class="dropdown-item text-secondary" href="#">Romance</a></li>
+                      <li><a class="dropdown-item text-secondary" href="#">Action</a></li>
+                      <li><a class="dropdown-item text-secondary" href="#">Thriller</a></li>
+                      <li><hr class="dropdown-divider bg-light"></li>
+                      <li><a class="dropdown-item text-secondary" href="#">Others</a></li>
+                    </ul>
+                  </div>
+                <div class="d-flex ">
+                    <div class="justify-content-end me-0 border px-3 py-1">
+                    <i class="bi bi-bar-chart-steps"></i>
+                    </div>
+                    <div class="justify-content-end me-0 border px-3 py-1">
+                        <i class="bi bi-border-all bg-dark"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-fluid p-0 mx-auto">
+            <div class="container mb-2 p-0">
+                <h2 class="text-light">Trending now</h2>
+            </div>
+            <div id="carouselExample" class="carousel slide d-none d-lg-block">
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media0.webp" class="card-img" width="200px" class="object-fit-cover" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media1.jpg" class="card-img" width="200px" class="object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media2.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media3.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media4.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media5.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media6.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media7.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media8.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media9.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media10.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media11.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media12.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media13.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media14.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media15.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media16.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media17.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media18.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media19.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media20.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media21.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media22.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media23.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media24.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media25.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media26.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media27.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media28.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media29.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media30.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media31.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media32.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media30.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media31.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media32.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                    <button class="carousel-control-prev justify-content-start text-dark" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next justify-content-end text-dark" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+
+
+            <!--<div class="row collapse show g-2 g-md-3 g-xl-5">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border border-2 border-dark">
+                        <img src="assets/media/media0.webp"
+                            class="card-imgimg-top"  width="400px"alt="maldives" />
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+
+
+        <div class="container-fluid p-0 mx-auto">
+            <div class="container mt-5 mb-2 p-0">
+                <h2 class="text-light">Watch It Again</h2>
+            </div>
+            <div id="carouselExample" class="carousel slide d-none d-lg-block">
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media0.webp" class="card-img" width="200px" class="object-fit-cover" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media1.jpg" class="card-img" width="200px" class="object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media2.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media3.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media4.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media5.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media6.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media7.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media8.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media9.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media10.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media11.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media12.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media13.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media14.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media15.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media16.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media17.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media18.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media19.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media20.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media21.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media22.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media23.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media24.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media25.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media26.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media27.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media28.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media29.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media30.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media31.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media32.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media30.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media31.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media32.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                    <button class="carousel-control-prev justify-content-start text-dark" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next justify-content-end text-dark" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+
+
+
+        </div>
+
+
+        <div class="container-fluid p-0 mx-auto">
+            <div class="container mt-5 mb-2 p-0">
+                <h2 class="text-light">New Releases</h2>
+            </div>
+            <div id="carouselExample" class="carousel slide d-none d-lg-block">
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media0.webp" class="card-img" width="200px" class="object-fit-cover" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media1.jpg" class="card-img" width="200px" class="object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media2.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media3.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media4.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media5.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media6.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media7.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media8.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media9.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media10.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media11.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media12.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media13.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media14.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media15.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media16.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media17.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media18.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media19.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media20.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media21.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media22.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media23.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media24.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media25.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media26.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media27.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media28.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media29.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container px-0 mt-3">
+                            <div class="row row-cols-6 justify-content-center g-1">
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media30.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media31.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media32.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media30.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media31.webp" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card border-dark">
+                                        <img src="assets/media/media32.jpg" class="card-img" width="200px" class="img-fluid object-fit-cover border rounded" alt="...">
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                    <button class="carousel-control-prev justify-content-start text-dark" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next justify-content-end text-dark" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <footer class=" text-white fixed-bottom mx-5 px-5">
+            <div class="container d-flex flex-column align-items-start mb-3">
+                <div class="container text-secondary p-0">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                        <div class="col p-1">
+                            <i class="bi bi-facebook display-5"></i>
+                            <i class="bi bi-youtube px-2 display-5"></i>
+                            <i class="bi bi-twitter px-2 display-5"></i>
+                            <i class="bi bi-youtube px-2 display-5"></i>
+                        </div>
+                        <div class="col p-1"></div>
+                        <div class="col p-1"></div>
+                        <div class="col p-1"></div>
+                    </div>
+                <div class="container text-secondary p-0">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-content-start">
+                        <div class="col p-1">Audio and Subtitles</div>
+                        <div class="col p-1">Audio description</div>
+                        <div class="col p-1">Help Center</div>
+                        <div class="col p-1">Gift Cards</div>
+                    </div>
+                <div class="container text-secondary p-0">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                        <div class="col p-1">Media center</div>
+                        <div class="col p-1">Investor Relations</div>
+                        <div class="col p-1">Jobs</div>
+                        <div class="col p-1">Terms of Use</div>
+                    </div>
+                <div class="container text-secondary p-0">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                        <div class="col p-1">Privacy</div>
+                        <div class="col p-1">Legal Notices</div>
+                        <div class="col p-1">Cookie Preferences</div>
+                        <div class="col p-1">Corporate Information</div>
+                    </div>
+                <div class="container text-secondary p-0">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                        <div class="col p-1">Contact us</div>
+
+                    </div>
+                </div>
+                <div class="container text-secondary p-0">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                <div class="col p-0 pt-4">
+                    <button type="button" class="btn btn-outline-secondary">
+                        Service Code
+
+                    </button>
+                </div>
+
+                </div>
+                <div class="container text-secondary p-0">
+                    <div class="row row-cols-md-4">
+                    <div class="col p-0 pt-3">© 1997-2019 Netflix, Inc. ..</div>
+    
+                    </div>
+            </div>  
+        </footer>
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
