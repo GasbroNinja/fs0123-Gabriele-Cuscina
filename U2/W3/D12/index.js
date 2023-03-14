@@ -7,7 +7,7 @@ const removeBtnElem = document.getElementById('removeBtn');
 
 const savedName = localStorage.getItem('name');
 if (savedName) {
-  savedNameElem.textContent = savedName;
+  savedNameElem.innerText = savedName;
 }
 
 
