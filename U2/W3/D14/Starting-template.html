@@ -456,15 +456,17 @@
       // verrà creata con l'effettivo valore di ritorno della Promise
       try {
         
-        const resp = await fetch("https://api.pexels.com/v1/search?query=nature")
+        const resp = await fetch('https://api.pexels.com/v1/search?query=nature')
+
         
                 // aspettando la risoluzione di fetch riceviamo il response object dentro la variabile "resp"
                 console.log("RESP", resp)
-                query='nature'
+                const api = 'https://api.pexels.com/v1/search?query=nature'
                 const authorization = {
                   headers: {
-                    "Authorization": "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH",
-                    "createClient":'k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH'
+                    "Content-Type": "application/json",
+                    "Authorization": "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH"
+                    
                   }
                 }
 
