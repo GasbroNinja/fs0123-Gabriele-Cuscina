@@ -71,7 +71,7 @@
   <header>
     <div class="collapse bg-dark" id="navbarHeader">
       <div class="container">
-        <div class="row">
+        <div class="row" >
           <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-white">About</h4>
             <p class="text-muted">
@@ -120,15 +120,25 @@
           them in a cool way!
         </p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Load Images</a>
-          <a href="#" class="btn btn-secondary my-2">Load Secondary Images</a>
+          <a href="#" id="primary" class="btn btn-primary my-2">Load Images</a>
+          <a href="#" id="secondary" class="btn btn-secondary my-2">Load Secondary Images</a>
         </p>
       </div>
     </section>
-    
+
+    <div class="container text-center">
+
+      <form>
+        <div class="form-group">
+          <label class="text-light bg-info border border-dark font-weight-bold display-4" for="formGroupExampleInput">RESERCH FILTER</label>
+          <input type="text" class="form-control text-center display-4" id="formGroupExampleInput" placeholder="Inserisci una parola chiave per cercare un determinato tipo di immagine     ''''  prova: city  ''''' " aria-placeholder="">
+        </div>
+      </form>
+
+    </div>
     <div class="album py-5 bg-light"> 
       <div class="container"> 
-        <div class="row"> <!--CONTAINER CARDS-->
+        <div class="row" id="rowMain"> <!--CONTAINER CARDS-->
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
@@ -438,111 +448,208 @@
     
     
    
-    const API_KEY = "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH"
-    const BASE_URL = "https://api.pexels.com/v1/"
-    const PARAM = {
+    const key = "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH"
+    let nature = "nature"
+    let night = "night"
+
+    const api = "https://api.pexels.com/v1/search?query=" + nature
+
+    const api2 = "https://api.pexels.com/v1/search?query=" + night
+
+    const auth = {
+      
       headers: {
-        "Content-Type": "application/json; charset=utf-8",
         "Authorization": "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH",
       }
     }
+    const newapi = "https://api.pexels.com/v1/search/?page=2&per_page=15&query=nature"
+
+    const secondaryBTN = document.getElementById("secondary");
+    const firstBtn = document.getElementById("primary");
     
-    
-    const fetchData = async () => {
-      console.log("pre")
-      // una volta dichiarata una funzione come async, il suo contesto si comporterà in modo particolare
-      // congelerà tutte le linee di codice successive alla keyword "await"
-      // anche la variabile associata al suo risultato aspetterà a crearsi e solo dopo che la promise diventa "settled" 
-      // verrà creata con l'effettivo valore di ritorno della Promise
-      try {
-        
-        const resp = await fetch('https://api.pexels.com/v1/search?query=nature')
+    firstBtn.addEventListener("click", event => {
 
-        
-                // aspettando la risoluzione di fetch riceviamo il response object dentro la variabile "resp"
-                console.log("RESP", resp)
-                const api = 'https://api.pexels.com/v1/search?query=nature'
-                const authorization = {
-                  headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH"
-                    
-                  }
-                }
+      const row = document.getElementById("rowMain")
+      row.innerHTML = ""
+      fetch(api,auth)
+      .then(responseObj => responseObj.json())
+      .then(data => {
+        const photos = data.photos;
 
-                if (!resp.ok) throw new Error("Abbiamo un problema con la fetch")
+        const searchNewImg = document.createElement("div")
+        searchNewImg.className = "col"
+        searchNewImg.innerHTML = `
+        <form>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Example label</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+          </div>
+        </form>
+        `
 
-                // il throw è come un return, interrompe in quel punto l'esecuzione del contesto della funzione
-
-
-                const cardz = await resp.json()
-                // anche json è una Promise che va aspettata, useremo anche qui la keyword "await"
-                // per funzioni normali (sincrone) che chiamerai in questo contesto NON SERVE l'"await"
-
-                const row = document.getElementsByClassName("row")
-                row.innerHTML = ""
-
-                cardz.forEach(cardz => {
-                  const col = document.createElement("div")
-                    col.className = "col"
-                    col.innerHTML = `
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                          <title>Placeholder</title>
-                          <rect width="100%" height="100%" fill="#55595c" />
-                          <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                            Thumbnail
-                          </text>
-                        </svg>
-                        <div class="card-body">
-                          <h5 class="card-title">Lorem Ipsum</h5>
-                          <p class="card-text">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
-                          </p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">
-                                View
-                              </button>
-                              <button type="button" class="btn btn-sm btn-outline-secondary">
-                                Edit
-                              </button>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
+        for (const photo of photos){
+          const col = document.createElement("div");
+          col.className = "col-md-4";
+          col.innerHTML = `
+          <div class="col">
+              <div class="card mb-4 shadow-sm">
+                <img src=${photo.src.medium} class="card-img img-fluid">
+                <div class="card-body">
+                  <h5 class="card-title">Lorem Ipsum</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">
+                        View
+                      </button>
+                      <button id="removeBtn" class="scarta btn btn-danger mt-0 fs-6 text-center px-5 border border-dark border-3">Hide
+                        </button>
                     </div>
-                  `
+                    <small class="text-muted">${photo.id}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+          const scarta = document.querySelectorAll('.scarta');
+                scarta.forEach((remBtn) => {
+                    remBtn.addEventListener("click", (e) => {
+                        e.target.closest(".col").classList.add("d-none")
+                    }
+                  )
+                }
+              )
 
-                })
-                console.log(cardz)
 
-
-                // questo catch fa da gestore di errori singolo, per errori differenti che possono scaturire all'interno del contesto del try
-            } catch (err) {
-                alert("QUI SIAMO NEL CATCH " + err.message)
-            } finally {
-                // settiamo la classe del loader a d-none e quindi si nasconderà
-                document.querySelector(".spinner-grow").classList.add("d-none")
-            }
-
-            console.log("...")
+          row.appendChild(col)
         }
 
-        window.onload = () => {
-            // occorre chiamare fetchData e far partire l'esecuzione del codice asincrono
-            fetchData() // una funzione async diventa di fatto una Promise che si risolverà come le altre Promise
-            // se avete un valore di ritorno da fetchData, dovrà essere aspettato come una qualasiasi Promise: o con un .then() o con un await
+        console.log(data)
+      }).catch(error => console.log("CATCH", error))
+      })
 
-            console.log("LAST OF ONLOAD")
+
+
+      secondaryBTN.addEventListener("click", event => {
+
+      const row = document.getElementById("rowMain")
+      row.innerHTML = ""
+      fetch(api2,auth)
+      .then(responseObj => responseObj.json())
+      .then(data => {
+        const photos = data.photos;
+        const searchNewImg = document.createElement("div")
+        searchNewImg.className = "col"
+        searchNewImg.innerHTML = `
+        <form>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Example label</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+          </div>
+        </form>
+        `
+
+        for (const photo of photos){
+          const col = document.createElement("div");
+          col.className = "col-md-4";
+          col.innerHTML = `
+          <div class="col">
+              <div class="card mb-4 shadow-sm">
+                <img src=${photo.src.medium} class="card-img img-fluid">
+                <div class="card-body">
+                  <h5 class="card-title">Lorem Ipsum</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">
+                        View
+                      </button>
+                      <button id="removeBtn" class="scarta btn btn-danger mt-0 fs-6 text-center px-5 border border-dark border-3">Hide
+                        </button>
+                    </div>
+                    <small class="text-muted">${photo.id}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+          row.appendChild(col)
+
+          const scarta = document.querySelectorAll('.scarta');
+                scarta.forEach((remBtn) => {
+                    remBtn.addEventListener("click", (e) => {
+                        e.target.closest(".col").classList.add("d-none")
+                    }
+                  )
+                }
+              )
+
         }
 
-  </script>
+        console.log(data)
+      }).catch(error => console.log("CATCH", error))
+      })
+
+
+
+
+    
+
+
+
+    // DOM MANIPULATION
+/*
+
+    const row = document.getElementById("rowMain")
+    row.innerHTML = ""
+  })
+  .catch(error => console.log("CATCH", error))
+    
+
+  
+      cardz.forEach((card) => {
+          const col = document.getElementById("rowMain");
+          col.closest.className = "col-md-4"
+          col.innerHTML = `
+          <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="${cardz.photos} card-img-top" width="100%" height="225">
+                <div class="card-body">
+                  <h5 class="card-title">Lorem Ipsum</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">
+                        View
+                      </button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">
+                        Edit
+                      </button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            `
+  
+            row.appendChild(col)
+        })
+      })
+      */
+      </script>
 
 </body>
 
