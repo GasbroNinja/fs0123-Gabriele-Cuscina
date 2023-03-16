@@ -432,36 +432,113 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>
-  <script>
-
-  fetch("https://api.pexels.com/v1/")
-  
-  .then(responseObj => responseObj.json())
-
-  const API_KEY = "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH"
-  const BASE_URL = "https://api.pexels.com/v1/"
-  const PARAM = {
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "Authorization": "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH"
-    }
-  }
-
-  const resp = async (url,params) => {
-    try{
-      const response = await fetch(url,params)
-      const data = await response.json()
-
-      if(!response.ok) {
-        throw new Error("Network is not working properly");
+    <script>
+    
+     
+    
+    
+   
+    const API_KEY = "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH"
+    const BASE_URL = "https://api.pexels.com/v1/"
+    const PARAM = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH",
       }
-      return data
-    } catch (error) {
-      console.log(error);
     }
-  }  
+    
+    
+    const fetchData = async () => {
+      console.log("pre")
+      // una volta dichiarata una funzione come async, il suo contesto si comporterà in modo particolare
+      // congelerà tutte le linee di codice successive alla keyword "await"
+      // anche la variabile associata al suo risultato aspetterà a crearsi e solo dopo che la promise diventa "settled" 
+      // verrà creata con l'effettivo valore di ritorno della Promise
+      try {
+        
+        const resp = await fetch("https://api.pexels.com/v1/search?query=nature")
+        
+                // aspettando la risoluzione di fetch riceviamo il response object dentro la variabile "resp"
+                console.log("RESP", resp)
+                query='nature'
+                const authorization = {
+                  headers: {
+                    "Authorization": "k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH",
+                    "createClient":'k1dTAoeoyA1sjV0w7SIvK66IoMCFAkNOQ3hlFVz15Imy0VZbrTjDysyH'
+                  }
+                }
+
+                if (!resp.ok) throw new Error("Abbiamo un problema con la fetch")
+
+                // il throw è come un return, interrompe in quel punto l'esecuzione del contesto della funzione
 
 
+                const cardz = await resp.json()
+                // anche json è una Promise che va aspettata, useremo anche qui la keyword "await"
+                // per funzioni normali (sincrone) che chiamerai in questo contesto NON SERVE l'"await"
+
+                const row = document.getElementsByClassName("row")
+                row.innerHTML = ""
+
+                cardz.forEach(cardz => {
+                  const col = document.createElement("div")
+                    col.className = "col"
+                    col.innerHTML = `
+                    <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c" />
+                          <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                            Thumbnail
+                          </text>
+                        </svg>
+                        <div class="card-body">
+                          <h5 class="card-title">Lorem Ipsum</h5>
+                          <p class="card-text">
+                            This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit
+                            longer.
+                          </p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">
+                                View
+                              </button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">
+                                Edit
+                              </button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  `
+
+                })
+                console.log(cardz)
+
+
+                // questo catch fa da gestore di errori singolo, per errori differenti che possono scaturire all'interno del contesto del try
+            } catch (err) {
+                alert("QUI SIAMO NEL CATCH " + err.message)
+            } finally {
+                // settiamo la classe del loader a d-none e quindi si nasconderà
+                document.querySelector(".spinner-grow").classList.add("d-none")
+            }
+
+            console.log("...")
+        }
+
+        window.onload = () => {
+            // occorre chiamare fetchData e far partire l'esecuzione del codice asincrono
+            fetchData() // una funzione async diventa di fatto una Promise che si risolverà come le altre Promise
+            // se avete un valore di ritorno da fetchData, dovrà essere aspettato come una qualasiasi Promise: o con un .then() o con un await
+
+            console.log("LAST OF ONLOAD")
+        }
 
   </script>
 
