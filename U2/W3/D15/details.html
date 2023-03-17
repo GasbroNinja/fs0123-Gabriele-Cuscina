@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container-fluid m-0 p-0 bg-info-subtle">
+        <nav class="navbar navbar-expand-lg" style="background-color: #3295db;">
+            <div class="container-fluid px-5">
+                <a class="navbar-brand text-warning fs-5 d-flex align-items-center" href="#"><img class="img-fluid bg-warning rounded-5 me-3" src="assets/imgs/Konachan.com-252082sample.jpg" width="85px" alt=""> <span class="px-3 fs-3 text-dark badge text-bg-info rounded-3 fw-bold">Hatsune Miku OFFICIAL </span> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto d-flex align-items-center flex-grow-1 mb-2 mb-lg-0">
+                        <li class="nav-item me-auto">
+                            <a class="nav-link active text-dark badge text-bg-info rounded-3 fs-5" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light badge text-bg-info rounded-3 fs-5" href="./backoffice.html">Backoffice</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <img src="assets/imgs/Konachan.com-348082aqua_hairasagao_minorucryinghatsune_mikulong_hairmicrophonetearstwintailsvocaloid.jpg"
+        alt="" style="height: 70vh; width:100%; object-fit: cover">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div id="concert-details" class="d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="text-dark badge text-bg-info rounded-3 fs-3 mb-4">Loading Event</h4>
+                        <div class="spinner-border text-info fs-4 display-4" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <!-- 
+                        <h1 class="fw-bold">Nome Appuntamento</h1>
+                        <p class="font-monospace">20/06/2023</p>
+                        <p>123€</p>
+                        <h6 class="bg-light py-3 ps-2">Server Details</h6>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item ps-2"><strong>id:</strong> 129812397123</li>
+                            <li class="list-group-item ps-2"><strong>id:</strong> 129812397123</li>
+                            <li class="list-group-item ps-2"><strong>id:</strong> 129812397123</li>
+                        </ul>
+    -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const URLParams = new URLSearchParams(window.location.search)
+
+        const selectedId = URLParams.get("id")
+
+
+        window.onload = async () => {
+            const container = document.getElementById("concert-details")
+            const fetchOpt  = 
+                {headers: {
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2EwY2Y4MWI0MjAwMTM5YjI4MzQiLCJpYXQiOjE2NzkwNDcxODAsImV4cCI6MTY4MDI1Njc4MH0.DEYGId0ZJ4-Z028r1Wi_VSuARGI-hnmlMy3hPD3-CrM"
+                }}
+
+            try {
+                const resp = await fetch("https://striveschool-api.herokuapp.com/api/product/" + selectedId,fetchOpt)
+                const productz = await resp.json()
+
+                // destrutturazione dell'oggetto in variabili contenenti valori delle sue proprietà
+                const { brand, description, imageUrl, name, price, _id } = productz;
+
+                container.innerHTML = `
+                <div class="container-fluid bg-primary rounded-3 d-flex flex-column mb-5 ">
+                    <h1 class="fw-bold text-center text-dark text-uppercase badge text-bg-warning rounded-5 mt-5 fs-4 py-1">${name}</h1>
+                    
+                    <p class="text-success badge text-bg-info rounded-3 fs-4 mt-3 mb-1">${price}€</p>
+                    
+                    <ul class="list-group list-group-flush font-monospace text-dark badge text-bg-info rounded-3 fs-3 px-3 mt-5">
+                        <h6 class="text-dark badge text-bg-info rounded-3 fs-3 py-3 px-3">ID Event:</h6>
+                        <li class="list-group-item ps-2"><strong>id:</strong> ${_id}</li>
+                    </ul>
+                    <button class="btn btn-success text-dark badge text-bg-success rounded-3 fs-3 px-3 mt-5 mb-5" onclick="editFuncConcert()">Edit Concert</button>
+                </div>    
+                    `
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
+
+        const editFuncConcert = () => {
+            window.location.assign("./backoffice.html?id=" + selectedId)
+        }
+
+    </script>
+</body>
+</html>
