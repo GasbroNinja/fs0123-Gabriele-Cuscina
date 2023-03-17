@@ -13,7 +13,7 @@
     <div class="container-fluid m-0 p-0 bg-info-subtle">
         <nav class="navbar navbar-expand-lg" style="background-color: #3295db;">
             <div class="container-fluid px-5">
-                <a class="navbar-brand text-warning fs-5 d-flex align-items-center" href="#"><img class="img-fluid bg-warning rounded-5 me-3" src="assets/imgs/Konachan.com-252082sample.jpg" width="85px" alt=""> <span class="px-3 fs-3 text-dark badge text-bg-info rounded-3 fw-bold">Hatsune Miku OFFICIAL </span> </a>
+                <a class="navbar-brand text-warning fs-5 d-flex align-items-center" href="./index.html"><img class="img-fluid bg-warning rounded-5 me-3" src="assets/imgs/Konachan.com-252082sample.jpg" width="85px" alt=""> <span class="px-3 fs-3 text-dark badge text-bg-info rounded-3 fw-bold">Hatsune Miku OFFICIAL </span> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -84,7 +84,7 @@
                 const resp = await fetch("https://striveschool-api.herokuapp.com/api/product/" + selectedId,fetchOpt)
                 const productz = await resp.json()
 
-                // destrutturazione dell'oggetto in variabili contenenti valori delle sue proprietà
+            
                 const { brand, description, imageUrl, name, price, _id } = productz;
 
                 container.innerHTML = `

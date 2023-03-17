@@ -35,7 +35,7 @@
     <div class="container-fluid m-0 p-0 bg-info-subtle">
         <nav class="navbar navbar-expand-lg" style="background-color: #3295db;">
             <div class="container-fluid px-5">
-                <a class="navbar-brand text-warning fs-5 d-flex align-items-center" href="#"><img class="img-fluid bg-warning rounded-5 me-3" src="assets/imgs/Konachan.com-252082sample.jpg" width="85px" alt=""> <span class="px-3 fs-3 text-dark badge text-bg-info rounded-3 fw-bold">Hatsune Miku OFFICIAL </span> </a>
+                <a class="navbar-brand text-warning fs-5 d-flex align-items-center" href="./index.html"><img class="img-fluid bg-warning rounded-5 me-3" src="assets/imgs/Konachan.com-252082sample.jpg" width="85px" alt=""> <span class="px-3 fs-3 text-dark badge text-bg-info rounded-3 fw-bold">Hatsune Miku OFFICIAL </span> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -99,7 +99,7 @@
                         <button type="button" class="btn btn-outline-secondary">Cancel</button>
                         <button type="submit" class="btn btn-primary me-auto" onclick="handleValidate()">Submit</button>
                         <button id="delete-btn" type="button" class="btn btn-danger d-none"
-                            onclick="handleDelete()">Delete</button>
+                            onclick="deleteBtn()">Delete</button>
                     </div>
                 </form>
             </div>
@@ -125,9 +125,14 @@
 
         window.onload = async () => {
 
-            if (selectedId ) {
+            if (selectedId) {
                 console.log(endpoint);
+
                 const productz = await fetchSuperMegaFiga(endpoint)
+
+                document.getElementById("subtitle").innerText = " — Edit your Event Concert"
+                document.getElementById("delete-btn").classList.remove("d-none")
+
                 const { brand, description, imageUrl, name, price, _id } = productz;
 
                     document.getElementById("name").value = name
@@ -135,6 +140,12 @@
                     document.getElementById("price").value = price
                     document.getElementById("brand").value = brand
                     document.getElementById("imageUrl").value = imageUrl
+
+                    const sbmtBtn = document.querySelector("button[type='submit']")
+                        sbmtBtn.classList.remove("btn-primary")
+                        sbmtBtn.classList.add("btn-success")
+                        sbmtBtn.innerText = "Modifica"
+
             }
         }
         
@@ -150,10 +161,13 @@
                 brand: document.getElementById("brand").value,
                 imageUrl: document.getElementById("imageUrl").value,
             }
-
+            
+            
             console.log("HERE ON SUBMIT", newConcert)
-
+            
             try {
+
+
                 const resp = await fetchSuperMegaFiga(endpoint, 'POST', newConcert)
 
                 if (resp.ok) {
@@ -174,24 +188,26 @@
             }
         }
 
-        const handleDelete = async () => {
 
+        
+
+
+        
+
+        const deleteBtn = async () => {
 
             const hasAccepted = confirm("Sei convinto di voler elimilare l'appuntamento?")
 
             if (hasAccepted) {
 
-                const fetchOptDel = { 
-                    method: "DELETE",
-                    headers: {   "Authorization":   auth_key  }
-                }
+
 
                 try {
                     console.log("DELETE")
                     
 
-                    const deletedObj = await fetchSuperMegaFiga(endpoint, 'DELETE')
-                    //const deletedObj = await resp.json()
+                    const deletedObj = await fetchSuperMegaFiga(endpoint, 'DELETE');
+                    const deletedevent = await resp.json()
 
                     alert("Hai eliminato l'appuntamento " + deletedObj.name)
 
