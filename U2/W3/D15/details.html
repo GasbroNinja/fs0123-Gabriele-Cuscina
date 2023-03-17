@@ -71,8 +71,7 @@
     <script>
         const URLParams = new URLSearchParams(window.location.search)
 
-        const selectedId = URLParams.get("id")
-
+        const selectedId = URLParams.get("_id")
 
         window.onload = async () => {
             const container = document.getElementById("concert-details")
@@ -108,7 +107,7 @@
         }
 
         const editFuncConcert = () => {
-            window.location.assign("./backoffice.html?id=" + selectedId)
+            window.location.assign("./backoffice.html?_id=" + selectedId)
         }
 
     </script>

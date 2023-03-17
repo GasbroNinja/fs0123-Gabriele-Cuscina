@@ -29,6 +29,7 @@
         }
     </style>
     </style>
+    <script src="fetch.js"></script>
 </head>
 <body>
     <div class="container-fluid m-0 p-0 bg-info-subtle">
@@ -113,14 +114,8 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search)
         const selectedId = urlParams.get("_id")
-        const endpoint = selectedId ? "https://striveschool-api.herokuapp.com/api/product/" + selectedId : "https://striveschool-api.herokuapp.com/api/product/"
+        const endpoint = selectedId ? BASE_URL + selectedId : BASE_URL
         const method = selectedId ? "PUT" : "POST"
-        const fetchOpt  = 
-                {headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2EwY2Y4MWI0MjAwMTM5YjI4MzQiLCJpYXQiOjE2NzkwNDcxODAsImV4cCI6MTY4MDI1Njc4MH0.DEYGId0ZJ4-Z028r1Wi_VSuARGI-hnmlMy3hPD3-CrM"
-                }}
-        const auth_key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2EwY2Y4MWI0MjAwMTM5YjI4MzQiLCJpYXQiOjE2NzkwNDcxODAsImV4cCI6MTY4MDI1Njc4MH0.DEYGId0ZJ4-Z028r1Wi_VSuARGI-hnmlMy3hPD3-CrM"     
-
         
 
         const handleValidate = () => {
@@ -129,41 +124,20 @@
         }
 
         window.onload = async () => {
-            const resp = await fetch("https://striveschool-api.herokuapp.com/api/product/", fetchOpt)
-            const productz = await resp.json()
-            const { brand, description, imageUrl, name, price, _id } = productz;
-            if (endpoint + selectedId) {
-                
-                try {
-                    const productz = await resp.json()
-                    if(productz){
-                    const { brand, description, imageUrl, name, price, _id } = productz;
-                    document.getElementById("subtitle").innerText = " — Edit Concert"
-                    document.getElementById("delete-btn").classList.remove("d-none")
-                    const resp = await fetch(endpoint,fetchOpt) 
-                    const concertData = await resp.json()
-                    }
-                    const { brand, description, imageUrl, name, price, _id } = card;
 
-                    
+            if (selectedId ) {
+                console.log(endpoint);
+                const productz = await fetchSuperMegaFiga(endpoint)
+                const { brand, description, imageUrl, name, price, _id } = productz;
+
                     document.getElementById("name").value = name
                     document.getElementById("description").value = description
                     document.getElementById("price").value = price
                     document.getElementById("brand").value = brand
                     document.getElementById("imageUrl").value = imageUrl
-
-                    
-                    const sbmtBtn = document.querySelector("button[type='submit']")
-                    sbmtBtn.classList.remove("btn-primary")
-                    sbmtBtn.classList.add("btn-success")
-                    sbmtBtn.innerText = "Modifica"
-                    console.log(sbmtBtn)
-                } catch (error) {
-                    console.log(error)
-                }
             }
-
         }
+        
 
         const startSubmit = async (event) => {
             event.preventDefault();
@@ -180,15 +154,7 @@
             console.log("HERE ON SUBMIT", newConcert)
 
             try {
-                const resp = await fetch(endpoint, {
-                    method: "POST",
-                    body: JSON.stringify(newConcert),
-                    headers: {
-                        
-                        "Content-Type": "application/json",
-                        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2EwY2Y4MWI0MjAwMTM5YjI4MzQiLCJpYXQiOjE2NzkwNDcxODAsImV4cCI6MTY4MDI1Njc4MH0.DEYGId0ZJ4-Z028r1Wi_VSuARGI-hnmlMy3hPD3-CrM"
-                    }
-                })
+                const resp = await fetchSuperMegaFiga(endpoint, 'POST', newConcert)
 
                 if (resp.ok) {
                     const modContent = await resp.json()
@@ -210,10 +176,9 @@
 
         const handleDelete = async () => {
 
-            // chiediamo conferma all'utente
+
             const hasAccepted = confirm("Sei convinto di voler elimilare l'appuntamento?")
 
-            // se accetta procediamo all'effettiva rimozione
             if (hasAccepted) {
 
                 const fetchOptDel = { 
@@ -223,15 +188,13 @@
 
                 try {
                     console.log("DELETE")
+                    
 
-                    // ricorda: basta una fetch con l'endpoint e il metodo corretti per rimuovere già qualcosa, l'await in questo caso non è obbligatorio
-                    // ma se ci serve un qualche dato di ritorno allora lo useremo per aspettare la resp e per ricavarne il body
-                    const resp = await fetch(endpoint, fetchOptDel,)
-                    const deletedObj = await resp.json()
+                    const deletedObj = await fetchSuperMegaFiga(endpoint, 'DELETE')
+                    //const deletedObj = await resp.json()
 
                     alert("Hai eliminato l'appuntamento " + deletedObj.name)
-                    // se non usassimo un alert qui servirebbe ritardare l'esecuzione del metodo assign di window, 
-                    // ma siccome alert è "bloccante" in questo specifico caso non occorre
+
                     window.location.assign("./index.html")
 
                 } catch (error) {
