@@ -69,19 +69,20 @@
         crossorigin="anonymous"></script>
 
     <script>
+        const BASE_URL = "https://striveschool-api.herokuapp.com/api/product/"
+        const BASE_OPT = {
+                headers: {
+                    Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2EwY2Y4MWI0MjAwMTM5YjI4MzQiLCJpYXQiOjE2NzkxNDIyNTIsImV4cCI6MTY4MDM1MTg1Mn0.eE7kuHqtTEj_9HE6b2xRlTrjGwyWFsmM99rQ-sXotx8"
+                }
+            }        
         const URLParams = new URLSearchParams(window.location.search)
 
         const selectedId = URLParams.get("_id")
 
         window.onload = async () => {
             const container = document.getElementById("concert-details")
-            const fetchOpt  = 
-                {headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2EwY2Y4MWI0MjAwMTM5YjI4MzQiLCJpYXQiOjE2NzkwNDcxODAsImV4cCI6MTY4MDI1Njc4MH0.DEYGId0ZJ4-Z028r1Wi_VSuARGI-hnmlMy3hPD3-CrM"
-                }}
-
             try {
-                const resp = await fetch("https://striveschool-api.herokuapp.com/api/product/" + selectedId,fetchOpt)
+                const resp = await fetch(BASE_URL + selectedId,BASE_OPT)
                 const productz = await resp.json()
 
             
