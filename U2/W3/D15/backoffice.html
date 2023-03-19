@@ -38,7 +38,7 @@
     <div class="container-fluid m-0 p-0 bg-info-subtle">
         <nav class="navbar navbar-expand-lg" style="background-color: #3295db;">
             <div class="container-fluid px-5">
-                <a class="navbar-brand text-warning fs-5 d-flex align-items-center" href="./index.html"><img class="img-fluid bg-warning rounded-5 me-3" src="assets/imgs/Konachan.com-252082sample.jpg" width="85px" alt=""> <span class="px-3 fs-3 text-dark badge text-bg-info rounded-3 fw-bold">Hatsune Miku OFFICIAL </span> </a>
+                <a class="navbar-brand text-warning fs-5 d-flex align-items-center" href="./index.html"><img class="img-fluid bg-warning rounded-5 me-3" src="assets/imgs/Konachan.com-252082sample.jpg" width="85px" alt=""> <span class="px-3 fs-3 text-dark badge text-bg-info rounded-3 fw-bold">♥ VOCALOID ♥ </span> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -46,20 +46,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto d-flex align-items-center flex-grow-1 mb-2 mb-lg-0">
-                        <li class="nav-item me-auto">
-                            <a class="nav-link active text-dark badge text-bg-info rounded-3 fs-5" aria-current="page" href="./index.html">Home</a>
+                        <li class="nav-item me-lg-auto">
+                            <a class="nav-link active text-dark badge text-bg-info rounded-3 fs-5" aria-current="page" href="./index.html">♥ Home ♥</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light badge text-bg-info rounded-3 fs-5" href="./backoffice.html">Backoffice</a>
+                            <a class="nav-link text-light badge text-bg-info rounded-3 fs-5" href="./backoffice.html">• Backoffice •</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+ 
     
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
+    <div class="container mt-5" id="myContainer">
+    <div class="row justify-content-center">
             <div class="col-8">
                 <h2 class="d-inline-block active text-dark badge text-bg-info rounded-3 fs-3">Backoffice</h2>
                 <h5 class="d-inline-block active text-dark badge rounded-3 p-0 fs-3"id="subtitle">— Create new "Event Concert"</h5>
@@ -99,7 +100,7 @@
                         <div class="form-text text-danger">Missing brand</div>
                     </div>
                     <div class="d-flex gap-2 mb-5">
-                        <button type="button" class="btn btn-outline-secondary">Cancel</button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="resetBtn()">Reset</button>
                         <button type="submit" class="btn btn-primary me-auto" onclick="handleValidate()">Submit</button>
                         <button id="delete-btn" type="button" class="btn btn-danger d-none"
                             onclick="deleteBtn()">Delete</button>

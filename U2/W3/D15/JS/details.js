@@ -19,7 +19,7 @@ window.onload = async () => {
 
         container.innerHTML = `
         <div class="container-fluid bg-primary rounded-3 d-flex flex-column justify-content-center mb-5">
-            <h1 class="fw-bold text-center text-dark text-uppercase badge text-bg-warning rounded-5 mt-5 fs-4 py-1">${name}</h1>
+            <h1 class="fw-bold text-center text-dark text-uppercase badge text-bg-warning rounded-5 mt-5 fs-3 py-1">${name}</h1>
             <ul class="list-group list-group-flush font-monospace text-dark badge text-bg-info rounded-3 fs-3 px-3 mt-5">
             <h6 class="text-dark badge text-bg-info rounded-3 fs-3 py-3 px-3">Idol:</h6>
             <img src="${imageUrl}" class="card-img p-0" alt="...">
