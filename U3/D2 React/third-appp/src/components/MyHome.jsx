@@ -3,10 +3,9 @@ import {
   Container,
 } from "react-bootstrap";
 
-
 import MyNav from "./MyNav";
 import MyFooter from "./MyFooter";
-import AllTheBooks from "./AllTheBooks";
+import Booklist from "./Booklist";
 
 class MyHome extends Component {
 
@@ -22,9 +21,7 @@ class MyHome extends Component {
             className="px-0"
             style={{
               minHeight: "100vh",
-              backgroundImage: `url("https://konachan.net/image/fea124cb3a0579a9b0700e3a9731b398/Konachan.com%20-%20352222%20bou_nin%20building%20city%20clouds%20original%20polychromatic%20scenic%20sky.jpg")`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
+              backgroundColor: "#e0a1c0",
             }}
           >
             <Container fluid className="px-0">
@@ -44,9 +41,7 @@ class MyHome extends Component {
               </p>
             </Container>
 
-            <Container>
-              <AllTheBooks />
-            </Container>
+            <Booklist />
 
             <Container fluid className="px-0 mb-3">
               <MyFooter />
