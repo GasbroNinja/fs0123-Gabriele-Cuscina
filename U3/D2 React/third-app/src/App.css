@@ -1,0 +1,5 @@
+.sfondo1{
+  background-image: !important url("../src/myimg/BackgroundPersonal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
