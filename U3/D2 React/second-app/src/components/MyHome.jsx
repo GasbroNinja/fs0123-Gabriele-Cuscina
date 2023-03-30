@@ -5,7 +5,8 @@ import {
 
 import MyNav from "./MyNav";
 import MyFooter from "./MyFooter";
-import Booklist from "./Booklist";
+
+import AllTheBooks from "./AllTheBooks";
 
 class MyHome extends Component {
 
@@ -41,7 +42,7 @@ class MyHome extends Component {
               </p>
             </Container>
 
-            <Booklist />
+            <AllTheBooks />
 
             <Container fluid className="px-0 mb-3">
               <MyFooter />
