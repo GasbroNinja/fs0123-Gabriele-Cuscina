@@ -8,142 +8,142 @@
     <meta name="description" content="Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in un modo facile.">
     <link rel="stylesheet" href="style.css">
 </head>
-    <body style="background-color: rgba(126, 50, 113, 0.678);">
-        
-        <header>
-            <img src="start-20220401T090940Z-001/start/assets/img/logo.svg" style="width: 200px;"/>
-            <h1 id="titolo" style="display: inline;">Epicode - il blog dei developers</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Articoli</a></li>
-                <li><a href="#">Job</a></li>
-            </ul>
-        </header>
-        
-        <hr>
-        
-        <main>
-
-            <div id="post1">
-            <h1>Sviluppo di una pagina web - Blog Epicode</h1>
-            <h3>Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in un modo facile.</h3>
-            
-                <hr>
-            <h3>(esercizio extra)</h3>
-            <form method="POST" action="http://127.0.0.1:5500/g2/index.html#" autocomplete="on">
-                <fieldset>
-                    <legend style="text-align: center;">Crea un post</legend>
-                    <label for="username" style="display: block;">Nome utente:</label>
-                    <input type="text" placeholder="username"/>
-                    <label for="contenuto post" style="display: block;">Contenuto post:</label>
-                    <textarea name="contenuto post" cols="20" rows="10" placeholder="Scrivi qui" style="display: block;"></textarea>
-                </fieldset>
-            </form>
-            
-            </div>
+    <body>
+        <div class="">
+            <header>
+                <img src="start-20220401T090940Z-001/start/assets/img/logo.svg" style="width: 200px;"/>
+                <h1 id="titolo" style="display: block;">Epicode - il blog dei developers</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Articoli</a></li>
+                    <li><a href="#">Job</a></li>
+                </ul>
+            </header>
             
             <hr>
             
-                <h2>Come creare un Template per i post di Mario Rossi - pubblicato il 25-10-2020</h2>
-                <h3>La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le parti comuni da applicare pagine
-                </h3>
-                <h4>
-                    La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le parti comuni da applicare a tutte le pagine
-                </h4>
-                <h4>Le varie aree sarranno quindi suddivise in:</h4>
-                <ul>
-                    <li>Contenuti di intestazione del tag &ltheader&gt </li>
-                    <li>Contenuti centrali variabili del tag &ltmain&gt (corpo principale)</li>
-                    <li>Contenuti di fine pagina comuni, da inserire nel tag &ltfooter&gt</li>
-                    <li>Formattazione del codice</li>
-                </ul>
-                <h4>il testo dell'articolo dovrà essere formattato per identificare tutte le parti da selezionare con i CSS. Percio i passi saranno:</h4>
-                <ul>
-                    <li>Progettare il markup assegnando ad ogni specifico testo il tag appropriato</li>
-                    <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
-                    <li>Applicare gli stili CSS</li>
-                    <li>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressochè totale.</li>
-                </ul>
+            <main>
 
-            <table>
-                <style> 
-                        table {
-                            width: 100%;
-                            text-align: center;
-                        }
-                        table th, table td {
-                            border: 2px solid black
-                        }
-                </style>
+                <div id="post1">
+                <h1>Sviluppo di una pagina web - Blog Epicode</h1>
+                <h3>Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in un modo facile.</h3>
                 
-                <thead><strong>Diffusione dei CSS</strong></thead>
+                    <hr>
+                <h3>(Extra)</h3>
+                <form method="POST" action="http://127.0.0.1:5500/g2/index.html#" autocomplete="on">
+                    <fieldset>
+                        <legend style="text-align: center;">Crea un post</legend>
+                        <label for="username" style="display: block;">Nome utente:</label>
+                        <input type="text" placeholder="username"/>
+                        <label for="contenuto post" style="display: block;">Contenuto post:</label>
+                        <textarea name="contenuto post" cols="20" rows="10" placeholder="Scrivi qui" style="display: block;"></textarea>
+                    </fieldset>
+                </form>
+                
+                </div>
+                
+                <hr>
+                
+                    <h2>Come creare un Template per i post di Mario Rossi - pubblicato il 25-10-2020</h2>
+                    <h3>La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le parti comuni da applicare pagine
+                    </h3>
+                    <h4>
+                        La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le parti comuni da applicare a tutte le pagine
+                    </h4>
+                    <h4>Le varie aree sarranno quindi suddivise in:</h4>
+                    <ul>
+                        <li>Contenuti di intestazione del tag &ltheader&gt </li>
+                        <li>Contenuti centrali variabili del tag &ltmain&gt (corpo principale)</li>
+                        <li>Contenuti di fine pagina comuni, da inserire nel tag &ltfooter&gt</li>
+                        <li>Formattazione del codice</li>
+                    </ul>
+                    <h4>il testo dell'articolo dovrà essere formattato per identificare tutte le parti da selezionare con i CSS. Percio i passi saranno:</h4>
+                    <ul>
+                        <li>Progettare il markup assegnando ad ogni specifico testo il tag appropriato</li>
+                        <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
+                        <li>Applicare gli stili CSS</li>
+                        <li>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressochè totale.</li>
+                    </ul>
 
-                    <tbody>
-                        <tr>
-                            <th>Anno</th>
-                            <th>% di utilizzo</th>
-                            <th>Supporto Browser</th>
-                        </tr>
-                        <tr>
-                            <td>2000</td>
-                            <td>20%</td>
-                            <td>17%</td>
-                        </tr>
-                        <tr>
-                            <td>2002</td>
-                            <td>35%</td>
-                            <td>22%</td>
-                        </tr>
-                        <tr>
-                            <td>2004</td>
-                            <td>45%</td>
-                            <td>42%</td>
-                        </tr>
-                        <tr>
-                            <td>2008</td>
-                            <td>80%</td>
-                            <td>51%</td>
-                        </tr>
-                        <tr>
-                            <td>2012</td>
-                            <td>100%</td>
-                            <td>76%</td>
-                        </tr>
+                <table>
+                    <style> 
+                            table {
+                                width: 100%;
+                                text-align: center;
+                            }
+                            table th, table td {
+                                border: 2px solid black
+                            }
+                    </style>
+                    
+                    <thead><strong>Diffusione dei CSS</strong></thead>
 
-                        <p>
-                            Un test di validazione potrà essere fatto tramite il tool online <a href="#">-LINK ESTERNO-</a> dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come loro:
-                            <p><a href="#">- INSERIRE VIDEO YOUTUBE -</a></p>
-                        </p>
-                    </tbody>
-            </table>
-        </main>
-        
-        <hr>
-        
-        <aside> Vuoi rimanere aggiornato su altre del blog? Iscriviti alla nostra newsletter:
+                        <tbody>
+                            <tr>
+                                <th>Anno</th>
+                                <th>% di utilizzo</th>
+                                <th>Supporto Browser</th>
+                            </tr>
+                            <tr>
+                                <td>2000</td>
+                                <td>20%</td>
+                                <td>17%</td>
+                            </tr>
+                            <tr>
+                                <td>2002</td>
+                                <td>35%</td>
+                                <td>22%</td>
+                            </tr>
+                            <tr>
+                                <td>2004</td>
+                                <td>45%</td>
+                                <td>42%</td>
+                            </tr>
+                            <tr>
+                                <td>2008</td>
+                                <td>80%</td>
+                                <td>51%</td>
+                            </tr>
+                            <tr>
+                                <td>2012</td>
+                                <td>100%</td>
+                                <td>76%</td>
+                            </tr>
+
+                            <p>
+                                Un test di validazione potrà essere fatto tramite il tool online <a href="#">🔗LINK ESTERNO</a> dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come loro:
+                                <p><a href="#">▶ INSERIRE VIDEO YOUTUBE</a></p>
+                            </p>
+                        </tbody>
+                </table>
+            </main>
             
-            <form>
-                <input type="email" placeholder="inserisci la tua email" >
-                <button>Iscriviti!</button>
-            </form>
-            <h5>Articoli correlati</h5>
-            <article><a href="#">Validare il codice HTML</a></article>
-            <p>Categoria: develop</p>
-            <p>Data: 18-9-2020</p>
-            <article><a href="#">Correggere la sintassi</a></article>
-            <p>Categoria: develop</p>
-            <p>Data: 16-9-2020</p>
-            <article><a href="#">Meno Kb nella pagina</a></article>
-            <p>Categoria: ottimizzazione</p>
-            <p>Data: 30-9-2020</p>
+            <hr>
+            
+            <aside> Vuoi rimanere aggiornato su altre del blog? Iscriviti alla nostra newsletter:
+                
+                <form>
+                    <input type="email" placeholder="inserisci la tua email" >
+                    <button>Iscriviti!</button>
+                </form>
+                <h5>Articoli correlati</h5>
+                <article><a href="#">Validare il codice HTML</a></article>
+                <p>Categoria: develop</p>
+                <p>Data: 18-9-2020</p>
+                <article><a href="#">Correggere la sintassi</a></article>
+                <p>Categoria: develop</p>
+                <p>Data: 16-9-2020</p>
+                <article><a href="#">Meno Kb nella pagina</a></article>
+                <p>Categoria: ottimizzazione</p>
+                <p>Data: 30-9-2020</p>
 
-        </aside>
-        <hr>
-        <footer>
-          <small>Blog Epicode &copy2021</small>
-          <p>Testata online di Mario Rossi, registrata con prot. n213/2018 - via Luigi Einaudi 2 - Milano.P.IVA 00112233.</p>
-          <p>info@epicode.school <a href="#">-LINK EMAIL-</a></p>
-        </footer>
-
+            </aside>
+            <hr>
+            <footer>
+            <small>Blog Epicode &copy2021</small>
+            <p>Testata online di Mario Rossi, registrata con prot. n213/2018 - via Luigi Einaudi 2 - Milano.P.IVA 00112233.</p>
+            <p>info@epicode.school <a href="#">-LINK EMAIL-</a></p>
+            </footer>
+        </div>
     </body> 
 </html>
