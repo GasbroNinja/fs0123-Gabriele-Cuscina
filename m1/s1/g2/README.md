@@ -1,7 +1,7 @@
 # 🛠 *Sviluppo di una pagina Web*
 #### ✨ **Blog Epicode**
 
-Ecco qui un altro progetto molto simile al precedente dal punto di vista di uso di tecnologie, ma con un intento più professionale. 
+Ecco qui un altro progetto molto simile al precedente dal punto di vista di uso di tecnologie, ma con un intento leggermente più professionale in vecchio stile!. 
 
 
 ___
