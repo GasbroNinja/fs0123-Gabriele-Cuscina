@@ -1,6 +1,6 @@
 
-# 🛠 *Sviluppo di una pagina Web*
-#### 🔬 **Il Blog dei developers - Epicode**
+# 🛠 *Applicazione Linguaggio di Programmazione JavaScript*
+#### 🔬 **Esercitazione Pratica JavaScript**
 
 Progetto a scopo pratico dal punto di vista dell'uso delle tecnologie applicate, studio del linguaggio di programmazione di **JAVASCRIPT** ( *Vanilla* )
  
