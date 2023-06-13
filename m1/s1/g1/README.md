@@ -10,7 +10,7 @@ Pura e semplice esercitazione poter prendere familiarità con lo studio della st
 
 # 👩‍💻Main Tecnologies:
 
-Qui troviamo un iniziale studio dei:
+Qui troviamo un iniziale studio delle seguenti tecnologie:
 
 # **HTML** : 
 - *Elementi*
