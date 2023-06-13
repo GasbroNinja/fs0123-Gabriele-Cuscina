@@ -2,7 +2,7 @@
 
 Ecco qui il mio primo progetto su *GitHub* si tratta di una single-page-up su una breve presentazione di me . 
 
-Qui si ritrova un me i miei **obiettivi**, **fini** e **conoscenze**.
+Riscontrete i miei **obiettivi**, **fini** e **conoscenze** attuali.
 
 # 🔚 Motivation / Scopo:
 
