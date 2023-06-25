@@ -17,7 +17,7 @@ Si tratta di un esercitazione per creare **Single Page Website**
 
 ## 🔚 Motivation / Scopo:
 
-Pura e semplice esercitazione poter prendere familiarità con lo studio della struttura e lo stile di una pagina Web!
+Pura e semplice esercitazione poter prendere familiarità con lo studio della struttura e lo stile e la logica di programmazione di una pagina Web!
 
 
 
