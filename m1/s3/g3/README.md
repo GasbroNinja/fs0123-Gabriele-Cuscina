@@ -85,6 +85,8 @@ Qui troviamo uno studio e utilizzo pratico delle seguenti tecnologie:
 
 > &rarr; **Studio di funzione**
 
+> &rarr; **Events**
+
 # Contatti personali 👤:
 
 [![ LINKEDIN ](https://i.ibb.co/C5FFfbB/linkedin-1.png)](https://www.linkedin.com/in/gabriele-cuscin%C3%A0)
