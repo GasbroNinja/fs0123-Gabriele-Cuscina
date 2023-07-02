@@ -95,7 +95,7 @@ Qui troviamo uno studio e utilizzo pratico delle seguenti tecnologie:
 
 > &rarr; **Implementazione Bootstrap 5**
 
-> &rarr; **Customize -> SASS** 
+> &rarr; **Customize -> SASS (nei prossimi progetti)** 
 
 > &rarr; **Layouts**
 
