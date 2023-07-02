@@ -1,5 +1,5 @@
 
-# 🛠 *Medium.comn Project Clone*
+# 🛠 *Medium.com Project Clone*
 #### 🔬 **Esercitazione Pratica JavaScript, HTML, CSS**
 
 Esercitazione al fine di migliorare le proprie skills e knowledge in CSS con Flexbox, Animations e JavaScript (*Vanilla*)
