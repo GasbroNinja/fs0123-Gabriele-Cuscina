@@ -90,7 +90,7 @@ Qui troviamo uno studio e utilizzo pratico delle seguenti tecnologie:
 
 > &rarr; **Output**
 
-### [![ BOOTSTRAP 5 ](https://i.ibb.co/82VKZZx/bootstrap.png)]()
+### [![ BOOTSTRAP 5 ](https://i.ibb.co/SBHnnQg/bootstrap.png)]()
 
 
 > &rarr; **Implementazione Bootstrap 5**
