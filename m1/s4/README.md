@@ -28,12 +28,6 @@ Ricreazione di una piattaforma di quiz simile ad un sito Web con compilazione a 
 Qui troviamo uno studio e utilizzo pratico delle seguenti tecnologie:
 
 
-# Contatti personali 👤:
-
-[![ LINKEDIN ](https://i.ibb.co/C5FFfbB/linkedin-1.png)](https://www.linkedin.com/in/gabriele-cuscin%C3%A0)
-
-### Gabriele Cuscinà
-
 
 
 
@@ -91,3 +85,12 @@ Qui troviamo uno studio e utilizzo pratico delle seguenti tecnologie:
 > &rarr; **Syntax**
 
 > &rarr; **Output**
+
+
+
+# Contatti personali 👤:
+
+[![ LINKEDIN ](https://i.ibb.co/C5FFfbB/linkedin-1.png)](https://www.linkedin.com/in/gabriele-cuscin%C3%A0)
+
+### Gabriele Cuscinà
+
