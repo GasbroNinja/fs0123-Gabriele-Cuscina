@@ -1,5 +1,5 @@
 
-# 🛠 *Bootstrap Improvements*
+# 🛠 *Bootstrap & SASS Improvements*
 #### 🔬 **Esercitazione Pratica BOOTSTRAP**
 
 Esercitazione al fine di migliorare le proprie skills e knowledge con **BOOTSTRAP**
