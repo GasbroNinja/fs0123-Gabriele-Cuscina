@@ -1,4 +1,4 @@
-
+![Logo](https://imgix.bustle.com/wmag/2016/12/16/58534fd3e3d613c03e1eae62_1G7A1708.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg)
 
 # 🛠 *"CONCERT IDOL PROJECT" SITO COMPLETO PER PRENOTARE CONCERTI (JAVASCRIPT PROJECT)*
 #### 🔬 **Esercitazione Pratica JavaScript =>  CONCERT IDOL PROJECT**
