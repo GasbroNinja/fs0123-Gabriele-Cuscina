@@ -1,4 +1,4 @@
-
+![Logo](https://images.ctfassets.net/4cd45et68cgf/6wHlMkLFTfKk3cQrTYnVLL/bdbbd0da407283d0833aa4575b4e81dd/Netflix_LinkdinHeader_N_Texture_5.png?w=2560)
 
 # 🛠 *1st NETFLIX CLONE*
 #### 🔬 **CLONE PROJECTS: JavaScript, HTML, CSS, Bootstrap**
