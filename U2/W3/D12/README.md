@@ -1,6 +1,6 @@
 
 
-# 🛠 *JAVASCRIPT CONSTRUCTOR AND CLASSES Improvements*
+# 🛠 *JAVASCRIPT Event listener & Local / Session Storage Improvements*
 #### 🔬 **Esercitazione Pratica JavaScript => Event listener & Local / Session Storage**
 
 Esercitazione al fine di migliorare le proprie skills e knowledge in JavaScript Vanilla
