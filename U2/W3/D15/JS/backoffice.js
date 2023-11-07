@@ -2,7 +2,7 @@ const BASE_URL = "https://striveschool-api.herokuapp.com/api/product/"
 const BASE_OPT = {
         headers: {
             "Content-Type": 'application/json; charset=utf-8',
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2EwY2Y4MWI0MjAwMTM5YjI4MzQiLCJpYXQiOjE2NzkxNDIyNTIsImV4cCI6MTY4MDM1MTg1Mn0.eE7kuHqtTEj_9HE6b2xRlTrjGwyWFsmM99rQ-sXotx8"
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRhMjdhNDhkZjhjNjAwMTkyNjdlNjEiLCJpYXQiOjE2OTkzNTg2MjgsImV4cCI6MTcwMDU2ODIyOH0.dQA_4n6iIxCdhpZdk9rGs6x2om0zEV3blqCwX4Mtr60"
         }
     }        
 const urlParams = new URLSearchParams(window.location.search)
